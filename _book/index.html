@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>R-Blitzkurs ⚡</title>
+  <meta name="description" content="Ein kurzer Einführungskurs in die Datenanalyse mit R" />
+  <meta name="generator" content="bookdown 0.24.2 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="R-Blitzkurs ⚡" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Ein kurzer Einführungskurs in die Datenanalyse mit R" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="R-Blitzkurs ⚡" />
+  
+  <meta name="twitter:description" content="Ein kurzer Einführungskurs in die Datenanalyse mit R" />
+  
+
+<meta name="author" content="Sebastian Sauer" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="hinweise.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">R-Blitzkurs</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Überblick</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#tldr"><i class="fa fa-check"></i><b>1.1</b> tl;dr</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#was-sie-hier-lernen-und-wozu-das-gut-ist"><i class="fa fa-check"></i><b>1.2</b> Was Sie hier lernen und wozu das gut ist</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#lernziele"><i class="fa fa-check"></i><b>1.3</b> Lernziele</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#inhaltsüberblick"><i class="fa fa-check"></i><b>1.4</b> Inhaltsüberblick</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#vorbereitung-vor-dem-kurs"><i class="fa fa-check"></i><b>1.5</b> Vorbereitung vor dem Kurs</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#modulliteratur"><i class="fa fa-check"></i><b>1.6</b> Modulliteratur</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="hinweise.html"><a href="hinweise.html"><i class="fa fa-check"></i><b>2</b> Hinweise</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="hinweise.html"><a href="hinweise.html#sicherheitsunterweisung"><i class="fa fa-check"></i><b>2.1</b> Sicherheitsunterweisung</a></li>
+<li class="chapter" data-level="2.2" data-path="hinweise.html"><a href="hinweise.html#organisatorisches"><i class="fa fa-check"></i><b>2.2</b> Organisatorisches</a></li>
+<li class="chapter" data-level="2.3" data-path="hinweise.html"><a href="hinweise.html#präsenzunterricht"><i class="fa fa-check"></i><b>2.3</b> Präsenzunterricht</a></li>
+<li class="chapter" data-level="2.4" data-path="hinweise.html"><a href="hinweise.html#rechtliche-hinweise"><i class="fa fa-check"></i><b>2.4</b> Rechtliche Hinweise</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="hinweise.html"><a href="hinweise.html#datenschutz"><i class="fa fa-check"></i><b>2.4.1</b> Datenschutz</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="hinweise.html"><a href="hinweise.html#it"><i class="fa fa-check"></i><b>2.5</b> IT</a></li>
+<li class="chapter" data-level="2.6" data-path="hinweise.html"><a href="hinweise.html#ich-brauche-hilfe.-was-soll-ich-tun"><i class="fa fa-check"></i><b>2.6</b> Ich brauche Hilfe. Was soll ich tun?</a></li>
+<li class="chapter" data-level="2.7" data-path="hinweise.html"><a href="hinweise.html#videokonferenzen"><i class="fa fa-check"></i><b>2.7</b> Videokonferenzen</a></li>
+<li class="chapter" data-level="2.8" data-path="hinweise.html"><a href="hinweise.html#streaming"><i class="fa fa-check"></i><b>2.8</b> Streaming</a></li>
+<li class="chapter" data-level="2.9" data-path="hinweise.html"><a href="hinweise.html#didaktik"><i class="fa fa-check"></i><b>2.9</b> Didaktik</a>
+<ul>
+<li class="chapter" data-level="2.9.1" data-path="hinweise.html"><a href="hinweise.html#lehrkonzept"><i class="fa fa-check"></i><b>2.9.1</b> Lehrkonzept</a></li>
+<li class="chapter" data-level="2.9.2" data-path="hinweise.html"><a href="hinweise.html#lerntipps"><i class="fa fa-check"></i><b>2.9.2</b> Lerntipps</a></li>
+</ul></li>
+<li class="chapter" data-level="2.10" data-path="hinweise.html"><a href="hinweise.html#umgangsformen"><i class="fa fa-check"></i><b>2.10</b> Umgangsformen</a></li>
+<li class="chapter" data-level="2.11" data-path="hinweise.html"><a href="hinweise.html#salvatorische-klausel"><i class="fa fa-check"></i><b>2.11</b> Salvatorische Klausel</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R-Blitzkurs ⚡</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">R-Blitzkurs ⚡</h1>
+<h2 class="subtitle"><em>Hinweise zur Organisation des Unterrichts</em></h2>
+<p class="author"><em>Sebastian Sauer</em></p>
+<p class="date"><em>Letzte Aktualisierung: 2022-02-24 13:20:16</em></p>
+</div>
+<div id="überblick" class="section level1" number="1">
+<h1><span class="header-section-number">Kapitel 1</span> Überblick</h1>
+<div id="tldr" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> tl;dr</h2>
+<ul>
+<li>Einführung in die Statistik-Software R</li>
+<li>keine Vorkenntnisse nötig</li>
+<li>Dauer: 60-90 Min.</li>
+<li>online (Zoom)</li>
+<li>Dozent: Sebastian Sauer</li>
+<li>Vorbereitung: Konto bei RStudio Cloud anlegen</li>
+</ul>
+</div>
+<div id="was-sie-hier-lernen-und-wozu-das-gut-ist" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Was Sie hier lernen und wozu das gut ist</h2>
+<p>R ist die führende Software für Datenanalyse und insofern Eintrittskarte in das Datenzeitalter.
+Sie würden gerne R kennenlernen, aber das kostet Sie zu viel Zeit?
+Dann kommen Sie zum R-Blitzkurs! In 60 Minuten lernen Sie zentrale Schritte der Datenanalyse.
+OK, vielleicht reicht die Zeit auch nur für einen ersten Eindruck -
+aber der erste Schritt ist der wichtigste.
+Aus dem Inhalt: Daten importieren in R, deskriptive Statistiken erstellen, Diagramme erzeugen, Daten und Ergebnisse exportieren, inferenzstatistische Tests durchführen.
+Sie brauchen keine Software vorab installieren; im Kurs wird Ihnen eine Online-Version von R bereitgestellt (kostenlos).
+Es ist aber nötig, sich ein Konto dafür vorab anzulegen, bitte lesen Sie die Details in der Kursbeschreibung.</p>
+</div>
+<div id="lernziele" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> Lernziele</h2>
+<p>Nach dem Absolvieren dieses Kurses …</p>
+<ul>
+<li>können die Teilnehmis einige zentrale Tätigkeiten der Datenanalyse in R durchführen</li>
+<li>sind die Teilnehmis in der Lage, selber Analysen mit R durchzuführen</li>
+</ul>
+</div>
+<div id="inhaltsüberblick" class="section level2" number="1.4">
+<h2><span class="header-section-number">1.4</span> Inhaltsüberblick</h2>
+<p>In diesem Kurs werden folgende Themen behandelt:</p>
+<ul>
+<li>Daten importieren und exportieren</li>
+<li>Deskriptive Statistiken erzeugen</li>
+<li>Datendiagramme erzeugen</li>
+<li>Inferenzstatistische Tests durchführen</li>
+</ul>
+<p>Alle Inhalte werden mit dem Statistikprogramm <em>R</em> umgesetzt.</p>
+</div>
+<div id="vorbereitung-vor-dem-kurs" class="section level2" number="1.5">
+<h2><span class="header-section-number">1.5</span> Vorbereitung vor dem Kurs</h2>
+<ul>
+<li>Legen Sie sich ein Konto an bei <a href="https://rstudio.cloud/plans/free">RStudio Cloud</a>; s. auch die Hinweise dazu <a href="https://data-se.netlify.app/2021/11/30/installation-von-r-und-seiner-freunde/#rstudio-cloud">hier</a>. In der kostenfreien Lizenz von RStudio Cloud sind 25h Nutzungszeit pro Monat enthalten.</li>
+<li>Alternativ können Sie sich R installieren wie <a href="https://data-se.netlify.app/2021/11/30/installation-von-r-und-seiner-freunde/">hier beschrieben</a> (kostenlos).</li>
+</ul>
+</div>
+<div id="modulliteratur" class="section level2" number="1.6">
+<h2><span class="header-section-number">1.6</span> Modulliteratur</h2>
+<p>Ein Teil der Literatur ist über viele Hochschulbibliotheken als PDF herunterladen;
+andere Titel sind offen im Internet verfügbar.
+Oft müssen Sie per VPN angemeldet (in der Bib.) sein für Volltextzugriff, wenn Sie nicht auf dem Campus sind.</p>
+<p>Einen nützlichen, schon recht umfangreicher Einstieg bietet das Buch von <span class="citation">Sauer (<a href="#ref-sauer_moderne_2019" role="doc-biblioref">2019</a>)</span>.</p>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-sauer_moderne_2019" class="csl-entry">
+Sauer, Sebastian. 2019. <em>Moderne <span>Datenanalyse</span> Mit <span>R</span>: <span>Daten</span> Einlesen, Aufbereiten, Visualisieren Und Modellieren</em>. 1. Auflage 2019. <span>FOM</span>-<span>Edition</span>. Wiesbaden: Springer. <a href="https://www.springer.com/de/book/9783658215866">https://www.springer.com/de/book/9783658215866</a>.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="hinweise.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/index.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

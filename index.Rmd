@@ -1,0 +1,140 @@
+--- 
+title: "R-Blitzkurs ⚡"
+
+author: "Sebastian Sauer"
+date: "Letzte Aktualisierung: `r Sys.time()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+# url: your book url like https://bookdown.org/yihui/bookdown
+# cover-image: path to the social sharing image like images/cover.jpg
+description: |
+   Ein kurzer Einführungskurs in die Datenanalyse mit R
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+---
+
+
+```{r global-knitr-options, include=FALSE}
+  knitr::opts_chunk$set(
+  fig.pos = 'H',
+  fig.asp = 0.618,
+  fig.align='center',
+  fig.width = 5,
+  out.width = "100%",
+  fig.cap = "", 
+  fig.path = "chunk-img/",
+  dpi = 300,
+  # tidy = TRUE,
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  cache = FALSE,
+  fig.show = "hold")
+```
+
+
+
+
+
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
+
+
+
+
+```{r}
+knitr::include_graphics("/Users/sebastiansaueruser/github-repos/__Archiv/stats-illustrations-Allison-Horst/rstats-artwork/rainbowr.gif")
+```
+
+
+[Autor: Allison Horst, CC-BY](https://github.com/allisonhorst/stats-illustrations)
+
+
+
+
+
+# Überblick
+
+
+## tl;dr
+
+- Einführung in die Statistik-Software R
+- keine Vorkenntnisse nötig
+- Dauer: 60-90 Min.
+- online (Zoom)
+- Dozent: Sebastian Sauer
+- Vorbereitung: Konto bei RStudio Cloud anlegen
+
+
+
+## Was Sie hier lernen und wozu das gut ist
+
+
+
+
+R ist die führende Software für Datenanalyse und insofern Eintrittskarte in das Datenzeitalter.
+Sie würden gerne R kennenlernen, aber das kostet Sie zu viel Zeit?
+Dann kommen Sie zum R-Blitzkurs! In 60 Minuten lernen Sie zentrale Schritte der Datenanalyse. 
+OK, vielleicht reicht die Zeit auch nur für einen ersten Eindruck -
+aber der erste Schritt ist der wichtigste.
+Aus dem Inhalt: Daten importieren in R, deskriptive Statistiken erstellen, Diagramme erzeugen, Daten und Ergebnisse exportieren, inferenzstatistische Tests durchführen.
+Sie brauchen keine Software vorab installieren; im Kurs wird Ihnen eine Online-Version von R bereitgestellt (kostenlos).
+Es ist aber nötig, sich ein Konto dafür vorab anzulegen, bitte lesen Sie die Details in der Kursbeschreibung.
+
+
+
+## Lernziele
+
+
+Nach dem Absolvieren dieses Kurses ...
+
+- können die Teilnehmis einige zentrale Tätigkeiten der Datenanalyse in R durchführen
+- sind die Teilnehmis in der Lage, selber Analysen mit R durchzuführen
+
+
+## Inhaltsüberblick
+
+In diesem Kurs werden folgende Themen behandelt:
+
+- Daten importieren und exportieren 
+- Deskriptive Statistiken erzeugen 
+- Datendiagramme erzeugen
+- Inferenzstatistische Tests durchführen
+
+
+Alle Inhalte werden mit dem Statistikprogramm *R* umgesetzt.
+
+
+
+
+## Vorbereitung vor dem Kurs
+
+- Legen Sie sich ein Konto an bei [RStudio Cloud](https://rstudio.cloud/plans/free); s. auch die Hinweise dazu [hier](https://data-se.netlify.app/2021/11/30/installation-von-r-und-seiner-freunde/#rstudio-cloud). In der kostenfreien Lizenz von RStudio Cloud sind 25h Nutzungszeit pro Monat enthalten.
+- Alternativ können Sie sich R installieren wie [hier beschrieben](https://data-se.netlify.app/2021/11/30/installation-von-r-und-seiner-freunde/) (kostenlos).
+- Werfen Sie einen Blick in das [RStudio Cloud Projekt dieses Kurses](https://rstudio.cloud/project/3421620).
+
+
+
+
+
+## Modulliteratur
+
+Ein Teil der Literatur ist über viele Hochschulbibliotheken als PDF herunterladen;
+andere Titel sind offen im Internet verfügbar.
+Oft müssen Sie per VPN angemeldet (in der Bib.) sein für Volltextzugriff, wenn Sie nicht auf dem Campus sind.
+
+Einen nützlichen, schon recht umfangreicher Einstieg bietet das Buch von @sauer_moderne_2019.
+
+
+
+
+
+
+
+
