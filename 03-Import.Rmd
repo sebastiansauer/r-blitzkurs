@@ -1,0 +1,64 @@
+
+
+# Daten importieren
+
+
+In der Datenanalyse ist das gebräuchlichste Format für Daten in Tabellenform die *CSV-Datei*.
+Das hat den Grund, weil dieses Format technisch schön einfach ist.
+Für uns Endverbraucher tut das nichts groß zur Sache, die CSV-Datei beherbergt 
+einfach eine brave Tabelle, sonst nichts.
+
+Damit Sie eine Datendatei importieren können, müssen Sie wissen, 
+wo die Datei ist.
+
+Schauen wir uns zwei Möglichkeiten an,
+wo eine Datei liegen könnte.
+
+1. Irgendwo im Internet, z.B. [hier](https://vincentarelbundock.github.io/Rdatasets/csv/datasets/mtcars.csv)
+2. Irgendwo auf Ihrem Computer, z.B. in Ihrem Projektordner
+
+In beiden Fällen wird der "Aufenthaltsort" der Datei durch den Pfad (in welcher Ordnerhierarchie?) und den Namen definiert.
+
+In beiden Fallen importieren Sie die Datei wie folgt.
+Klicken Sie im Reiter *Environment* auf *Import Dataset* (Ah!), s. Abbildung \@ref(fig:import-data).
+
+
+```{r import-data, fig.cap = "Datendateien importieren über das Menü in RStudio"}
+knitr::include_graphics("img/import-data.png")
+```
+
+Wählen Sie `From Text (readr)...`.
+
+Im folgenden Menü geben Sie dann den Pfad zur Datei an, ganz oben bei *File/URL:*, s. Abbildung \@ref(fig:import-data2).
+
+```{r import-data2, fig.cap = "Pfad zur Datendatei eingeben"}
+knitr::include_graphics("img/import-data2.png")
+```
+
+Mit einem Klick auf *Update* sehen Sie, was sich hinter dem Pfad verbirgt.
+Wenn Sie auf *Import* klicken, 
+wird die Datei in R importiert. Voila!
+
+Mit einem Klick auf *Browse* können Sie Ihren Rechner durchforsten nach der gesuchten Datendatei.
+
+
+Jetzt sehen Sie, dass im Reiter *Environment* ein neuer Eintrag entstanden ist,
+und zwar mit dem Namen `mtcars`. 
+Das ist der Name, der Datei, die wir eingelesen haben,
+und so heißt auch die frisch erzeugte Tabelle (s. Abbildung \@ref(fig:environment)).
+Mit Klick auf das Tabellen-Icon können Sie sich die Tabelle anschauen (Nur Anschauen, nicht die Werte verändern).
+
+
+```{r environment, fig.cap = "Hier sehen Sie die geöffneten Tabellen.", out.width="50%"}
+knitr::include_graphics("img/environment.png")
+```
+
+
+
+Ist sie nicht schön (s. Abbildung \@ref(fig:mtcars-head)? Ein Prachtexampler einer Tabelle, nicht wahr?
+
+
+```{r mtcars-head, fig.cap = "Die ersten Zeilen der Tabelle 'mtcars'", out.width="50%"}
+knitr::include_graphics("img/mtcars-head.png")
+```
+

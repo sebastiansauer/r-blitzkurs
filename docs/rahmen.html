@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>R-Blitzkurs ⚡</title>
+  <title>Kapitel 3 Rahmen | R-Blitzkurs ⚡</title>
   <meta name="description" content="Ein kurzer Einführungskurs in die Datenanalyse mit R" />
   <meta name="generator" content="bookdown 0.24.2 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="R-Blitzkurs ⚡" />
+  <meta property="og:title" content="Kapitel 3 Rahmen | R-Blitzkurs ⚡" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="R-Blitzkurs ⚡" />
+  <meta name="twitter:title" content="Kapitel 3 Rahmen | R-Blitzkurs ⚡" />
   
   <meta name="twitter:description" content="Ein kurzer Einführungskurs in die Datenanalyse mit R" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="hinweise.html"/>
+<link rel="prev" href="hinweise.html"/>
+<link rel="next" href="daten-importieren.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -245,78 +245,261 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">R-Blitzkurs ⚡</h1>
-<p class="author"><em>Sebastian Sauer</em></p>
-<p class="date"><em>Letzte Aktualisierung: 2022-02-24 23:09:06</em></p>
+<div id="rahmen" class="section level1" number="3">
+<h1><span class="header-section-number">Kapitel 3</span> Rahmen</h1>
+<div id="der-prozess-der-datenanalyse" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Der Prozess der Datenanalyse</h2>
+<p>Datenanalyse kann man als Prozess mit mehreren Schritten verstehen, s. Abb. <a href="rahmen.html#fig:prozess">3.1</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:prozess"></span>
+<img src="img/Prozess.png" alt="Der Prozess der Datenanalyse" width="50%" />
+<p class="caption">
+Figure 3.1: Der Prozess der Datenanalyse
+</p>
 </div>
-<div id="überblick" class="section level1" number="1">
-<h1><span class="header-section-number">Kapitel 1</span> Überblick</h1>
-<p><img src="img/data_cowboy.png" width="25%" style="display: block; margin: auto;" /></p>
-<p><a href="https://github.com/allisonhorst/stats-illustrations">Autor: Allison Horst, CC-BY</a></p>
-<div id="tldr" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> tl;dr</h2>
+<p>Natürlich kann man sich auch andere sinnvolle Darstellungen dieses Ablaufs vorstellen.</p>
+</div>
+<div id="warum-r" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Warum R?</h2>
+<p>R ist <em>open source</em>, jeder kann beitragen. Das tuen auch viele.
+Daher gibt es viel mehr Entwickler für R wie für ein propriäteres Programm wie z.B. SPSS.
+Der Unterschied in der Zahl der Entwickler ist im Diagramm <a href="#fig:r-spsss"><strong>??</strong></a> dargestellt.
+Achtung: Die Diagrammgrößen sind hier rein “gefühlt” und sollen lediglich einen Eindruck vermitteln.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:r-spss"></span>
+<img src="chunk-img/r-spss-1.png" alt="Gefühlter Vergleich der Anzahl der Entwickler nach Statistik-Software" width="100%" />
+<p class="caption">
+Figure 3.2: Gefühlter Vergleich der Anzahl der Entwickler nach Statistik-Software
+</p>
+</div>
+<p>Für einen genaueren Eindruck kann man viele Statistiken heranziehen.
+Nehmen wir die Anzahl der Suchanfragen bei &lt;stackoverflow.com&gt;,
+dem größten FAQ-Forum für Software-Entwicklung.
+Wir vergleichen Suchanfragen mit dem Tag <code>[r]</code> zu Suchanfragen mit dem Tag <code>[spss]</code><a href="literatur.html#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. Die Ergebnisse sind in Abbildung <a href="rahmen.html#fig:stackoverflow1">3.3</a> dargestellt.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:stackoverflow1"></span>
+<img src="chunk-img/stackoverflow1-1.png" alt="Suchanfragen nach R bzw SPSS, Stand 2022-02-24" width="100%" />
+<p class="caption">
+Figure 3.3: Suchanfragen nach R bzw SPSS, Stand 2022-02-24
+</p>
+</div>
+</div>
+<div id="architektur-von-r" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Architektur von R</h2>
+<div id="r-vs.-rstudio" class="section level3" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> R vs. RStudio</h3>
+<p><span class="citation">Ismay and Kim (<a href="#ref-ismay_moderndive_2019" role="doc-biblioref">2019</a>)</span> zeigen eine schöne Analogie, was der Unterschied von <em>R</em> und <em>RStudio</em> ist (s. Abbildung <a href="rahmen.html#fig:r-rstudio">3.4</a>).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:r-rstudio"></span>
+<img src="https://d33wubrfki0l68.cloudfront.net/0b4d0569b2ddf6147da90b110fbb2a17653c8b08/f06f3/images/shutterstock/r_vs_rstudio_1.png" alt="R vs. RStudio" width="100%" />
+<p class="caption">
+Figure 3.4: R vs. RStudio
+</p>
+</div>
+<p>Wir verwenden beide Programme. Aber wir <em>öffnen</em> nur RStudio.
+RStudio findet selbständig R und öffnet diese “heimlich”.
+Öffnen Sie nicht noch extra R (sonst wäre R zweifach geöffnet).</p>
+<p>Hier ein Screenshot von der Oberfläche von RStudio (s. Abbildung <a href="rahmen.html#fig:rstudio">3.5</a>).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:rstudio"></span>
+<img src="https://d33wubrfki0l68.cloudfront.net/8b21462ee6be0450582226771d13b89481492ee1/b1757/images/rstudio_screenshots/rstudio.png" alt="So sieht RStudio aus" width="100%" />
+<p class="caption">
+Figure 3.5: So sieht RStudio aus
+</p>
+</div>
+</div>
+<div id="r-studio-cloud" class="section level3" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> R-Studio Cloud</h3>
+<p>RStudio Cloud ist ein Webdienst von RStudio (zum Teil kostenlos).
+Man kann damit online mit R arbeiten. Die Oberfläche ist praktisch identisch zur
+Desktop-Version (S. Abbildung <a href="rahmen.html#fig:rstudio-cloud">3.6</a>).
+Ein Vorteil ist, dass man als Nutzer nichts installieren muss.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:rstudio-cloud"></span>
+<img src="img/rstudio-cloud.png" alt="RStudio Cloud" width="100%" />
+<p class="caption">
+Figure 3.6: RStudio Cloud
+</p>
+</div>
+</div>
+<div id="r-pakete" class="section level3" number="3.3.3">
+<h3><span class="header-section-number">3.3.3</span> R-Pakete</h3>
+<p>Typisch für R ist sein modularer Aufbau: Man kann eine große Zahl an Erweiterungen (“Pakete”) installieren, alle kostenlos.</p>
+<p>In R Paketen “wohnen” Funktionen, also Dinge, die R kann, wenn das Paket verfügbar ist.</p>
+<p>Man kann sich daher ein R-Paket vorstellen wie ein Buch:
+Wenn R es gelesen hat, dann kennt es die Inhalte.
+Diese Inhalte könnten irgendwelche Formeln, also Berechnungen sein.
+Es könnte aber die “Bauanleitung” für ein schönes Diagramm sein.</p>
+<p>Ist ein spezielles R-Paket auf Ihrem Computer vorhanden,
+so können Sie diese Funktionalität nutzen.</p>
+<p>Die Zahl an diesen “Paketen” ist groß (zur Verdeutlichung s. Abbildung <a href="rahmen.html#fig:ship">3.7</a>).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ship"></span>
+<img src="img/11102039694_d42ca1ff1c_c.jpg" alt="Containershiff, Corey Seeman, CC-BY-NC 20, Flickr.com" width="100%" />
+<p class="caption">
+Figure 3.7: Containershiff, Corey Seeman, CC-BY-NC 20, Flickr.com
+</p>
+</div>
+<p><em>Erweiterungen</em> kennt man von vielen Programmen, sie werden auch <em>Add-Ons</em>, <em>Plug-Ins</em> oder sonstwie genannt.</p>
+<p>Man siehe zur Verdeutlichung Erweiterungen beim Broswer Chrome (Abbildung <a href="rahmen.html#fig:chrome">3.8</a>).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:chrome"></span>
+<img src="img/chrome-extensions.png" alt="Erweiterungen beim Browser Chrome" width="100%" />
+<p class="caption">
+Figure 3.8: Erweiterungen beim Browser Chrome
+</p>
+</div>
+<p>Die Anzahl der R-Pakete ist groß; allein auf dem “offiziellen Web-Store” (nennt sich “CRAN”) von R
+gibt es ca. 20,000 Pakete (Abbildung <a href="rahmen.html#fig:cran">3.9</a>; <a href="https://gist.github.com/daroczig/3cf06d6db4be2bbe3368">Quelle</a>).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:cran"></span>
+<img src="https://gist.githubusercontent.com/daroczig/3cf06d6db4be2bbe3368/raw/c6e74a90d262be7998e67d464314a8cd7a2b05ed/number-of-submitted-packages-to-CRAN.png" alt="Anzahl der Pakete auf CRAN" width="100%" />
+<p class="caption">
+Figure 3.9: Anzahl der Pakete auf CRAN
+</p>
+</div>
+<div id="pakete-installieren" class="section level4" number="3.3.3.1">
+<h4><span class="header-section-number">3.3.3.1</span> Pakete installieren</h4>
+<p>Wie jede Software muss man Pakete (Erweiterungen für R) erst einmal installieren,
+bevor man sie verwenden kann.
+Ja, einmal installieren reicht.</p>
+<p>Das geht komfortabel, wenn man beim Reiter <em>Packages</em> auf <em>Install</em> klickt (s. Abb. <a href="rahmen.html#fig:install-packages">3.10</a>).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:install-packages"></span>
+<img src="img/install-packages.png" alt="So kann man Pakete in R installieren." width="100%" />
+<p class="caption">
+Figure 3.10: So kann man Pakete in R installieren.
+</p>
+</div>
+<p>Dann öffnet sich ein Menü, wo man die Namen der gewünschten R-Pakete eingeben kann (s. Abbildung <a href="rahmen.html#fig:install-packages2">3.11</a>)</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:install-packages2"></span>
+<img src="img/install-packages.png" alt="Hier den oder die Namen der gewünschten R-Pakete eingeben." width="100%" />
+<p class="caption">
+Figure 3.11: Hier den oder die Namen der gewünschten R-Pakete eingeben.
+</p>
+</div>
+<p>Welche R-Pakete sind denn schon installiert?</p>
+<p>Im Reiter <em>Packages</em> können Sie nachschauen, welche Pakete
+auf Ihrem Computer schon installiert sind.
+Diese Pakete brauchen Sie logischerweise dann <em>nicht</em> noch mal installieren.</p>
+<p>Ja, aber welche R-Pakete “soll” ich denn installieren, welche brauch ich denn?</p>
+<p>Im Moment sollten Sie die folgenden Pakete installiert haben:</p>
 <ul>
-<li>Einführung in die Statistik-Software R</li>
-<li>keine Vorkenntnisse nötig</li>
-<li>Dauer: 60-90 Min.</li>
-<li>online (Zoom)</li>
-<li>Dozent: Sebastian Sauer</li>
-<li>Vorbereitung: Konto bei RStudio Cloud anlegen</li>
-<li>Die zentrale Software ist diess <a href="https://rstudio.cloud/project/3421620">RStudio Cloud Projekt</a>.</li>
+<li><code>tidyverse</code></li>
+<li><code>rstatix</code></li>
+</ul>
+<p>Wenn Sie die noch nicht installiert haben sollten,
+dann können Sie das jetzt ja nachholen.</p>
+</div>
+<div id="pakete-starten" class="section level4" number="3.3.3.2">
+<h4><span class="header-section-number">3.3.3.2</span> Pakete starten</h4>
+<p>Wenn Sie ein Softwareprogramm - nichts anderes sind R-Pakete - installiert haben,
+müssen Sie es noch <em>starten</em>.</p>
+<p>Merke: Ein bestimmtes Paket muss man nur einmalig installieren.
+Aber man muss es jedes Mal neu starten, wenn man R (bzw. RStudio) startet.</p>
+<p>Sie erkennen leicht, ob ein Paket gestartet ist, wenn Sie ein Häkchen vor dem
+Namen des Pakets in der Paketliste (Reiter <em>Packages</em>) sehen, s. Abbildung <a href="rahmen.html#fig:install-packages">3.10</a>.</p>
+</div>
+</div>
+<div id="projekte-in-r" class="section level3" number="3.3.4">
+<h3><span class="header-section-number">3.3.4</span> Projekte in R</h3>
+<p>Ein <em>Projekt</em> in RStudio ist letztlich ein Ordner,
+der als “Basis” für eine Reihe von Dateien verwendet wird.
+Sagen wir, das Projekt heißt <code>cool_stuff</code>.
+RStudio legt uns diesen Ordner an einem von uns gewählten Platz auf unserem Computer an.
+Das ist ganz praktisch, weil man dann sagen kann “Hey R, nimmt die Datei ‘daten.csv’”,
+ohne einen Pfad anzugeben.
+Vorausgesetzt, die Datei liegt auch im Projektordner (<code>cool_stuff</code>).</p>
+<p>Projekte kann anlegen mit Klick auf das Icon, das einen Quader mit dem Buchstaben R darin anzeigt (s. Abbildung <a href="rahmen.html#fig:rstudio-projekte">3.12</a>)</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:rstudio-projekte"></span>
+<img src="img/rstudio-projekte.png" alt="RStudio-Projekte, Beispiele" width="25%" />
+<p class="caption">
+Figure 3.12: RStudio-Projekte, Beispiele
+</p>
+</div>
+</div>
+<div id="skriptdateien" class="section level3" number="3.3.5">
+<h3><span class="header-section-number">3.3.5</span> Skriptdateien</h3>
+<p>Die R-Befehle (“Syntax”) schreiben Sie am besten in eine speziell dafür
+vorgesehene Textdatei in RStudio.
+Eine Sammlung von (R-)Befehlen nennt man auch ein <em>Skript</em>,
+daher spricht man auch von einer <em>Skriptdatei</em>.
+Um eine neue R-Skriptdatei zu öffnen, klicken Sie auf das Icon,
+das ein weißes Blatt mit einem grünen Pluszeichen zeigt, s.
+Abbildung <a href="rahmen.html#fig:script-new">3.13</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:script-new"></span>
+<img src="img/script-new.png" alt="So erstellen Sie eine neue Skriptdatei." width="50%" />
+<p class="caption">
+Figure 3.13: So erstellen Sie eine neue Skriptdatei.
+</p>
+</div>
+<p>Vergessen Sie nicht zu speichern,
+wenn Sie ein tolles Skript geschrieben haben.
+Dafür gibt es mehrere Möglichkeiten:</p>
+<ul>
+<li>Strg+S</li>
+<li>Menü: File &gt; Save</li>
+<li>Klick auf das Icon mit der Diskette (vgl. Abbildung <a href="rahmen.html#fig:script-new">3.13</a>)</li>
+</ul>
+<p>Eine Skriptdatei können Sie in typischer Manier öffnen:</p>
+<ul>
+<li>Strg+O</li>
+<li>Klick auf das Icon mit der Akte und dem grünen Pfeil (vgl. Abbildung <a href="rahmen.html#fig:script-new">3.13</a>)</li>
+<li>Menü: File &gt; Open File…</li>
 </ul>
 </div>
-<div id="was-sie-hier-lernen-und-wozu-das-gut-ist" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Was Sie hier lernen und wozu das gut ist</h2>
-<p>R ist die führende Software für Datenanalyse und insofern Eintrittskarte in das Datenzeitalter.
-Sie würden gerne R kennenlernen, aber das kostet Sie zu viel Zeit?
-Dann kommen Sie zum R-Blitzkurs! In 60 Minuten lernen Sie zentrale Schritte der Datenanalyse.
-OK, vielleicht reicht die Zeit auch nur für einen ersten Eindruck -
-aber der erste Schritt ist der wichtigste.
-Aus dem Inhalt: Daten importieren in R, deskriptive Statistiken erstellen, Diagramme erzeugen, Daten und Ergebnisse exportieren, inferenzstatistische Tests durchführen.
-Sie brauchen keine Software vorab installieren; im Kurs wird Ihnen eine Online-Version von R bereitgestellt (kostenlos).
-Es ist aber nötig, sich ein Konto dafür vorab anzulegen, bitte lesen Sie die Details in der Kursbeschreibung.</p>
 </div>
-<div id="lernziele" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Lernziele</h2>
-<p>Nach dem Absolvieren dieses Kurses …</p>
-<ul>
-<li>können die Teilnehmis einige zentrale Tätigkeiten der Datenanalyse in R durchführen</li>
-<li>sind die Teilnehmis in der Lage, selber Analysen mit R durchzuführen</li>
-</ul>
+<div id="grundlagen-von-r" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Grundlagen von R</h2>
+<div id="variablen" class="section level3" number="3.4.1">
+<h3><span class="header-section-number">3.4.1</span> Variablen</h3>
+<p>In jeder Programmiersprache kann man Variablen definieren,
+so auch in R:</p>
+<p>Der <em>Zuweisungspfeil</em> <code>&lt;-</code> definiert eine neue <em>Variable</em> (oder überschreibt den Inhalt,
+wenn die Variable schon existiert).</p>
+<p>Sie können sich eine Variable wie einen Becher oder Behälter vorstellen,
+der bestimmte Werte enthält.
+Auf dem Becher steht (mit Edding geschrieben) der Name des Bechers.
+Natürlich können Sie die Werte aus dem Becher entfernen und sie
+durch neue ersetzen (vgl. Abbildung <a href="rahmen.html#fig:def-vars">3.14</a>).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:def-vars"></span>
+<img src="img/Variablen_zuweisen.png" alt="Variablen zuweisen" width="25%" />
+<p class="caption">
+Figure 3.14: Variablen zuweisen
+</p>
 </div>
-<div id="inhaltsüberblick" class="section level2" number="1.4">
-<h2><span class="header-section-number">1.4</span> Inhaltsüberblick</h2>
-<p>In diesem Kurs werden folgende Themen behandelt:</p>
-<ul>
-<li>Daten importieren und exportieren</li>
-<li>Deskriptive Statistiken erzeugen</li>
-<li>Datendiagramme erzeugen</li>
-<li>Inferenzstatistische Tests durchführen</li>
-</ul>
-<p>Alle Inhalte werden mit dem Statistikprogramm <em>R</em> umgesetzt.</p>
+<p>R kann übrigens auch rechnen:</p>
+<p>Der <em>Zuweisungspfeil</em> <code>&lt;-</code> definiert eine neue <em>Variable</em> (oder überschreibt den Inhalt,
+wenn die Variable schon existiert).</p>
+<p>Aber was ist jetzt der Wert, der “Inhalt” der Variable <code>die_summe</code>?</p>
+<p>Um den Wert, d.h. den Inhalt einer Variablen in R <em>auszulesen</em>,
+geben wir einfach den Namen des Objekts ein:</p>
+<pre><code>## [1] 85</code></pre>
+<p>Was passiert wohl, wenn wir <code>die_summe</code> jetzt wie folgt definieren:</p>
+<p>Wer hät’s geahnt:</p>
+<pre><code>## [1] 86</code></pre>
 </div>
-<div id="vorbereitung-vor-dem-kurs" class="section level2" number="1.5">
-<h2><span class="header-section-number">1.5</span> Vorbereitung vor dem Kurs</h2>
-<ul>
-<li>Legen Sie sich ein Konto an bei <a href="https://rstudio.cloud/plans/free">RStudio Cloud</a>; s. auch die Hinweise dazu <a href="https://data-se.netlify.app/2021/11/30/installation-von-r-und-seiner-freunde/#rstudio-cloud">hier</a>. In der kostenfreien Lizenz von RStudio Cloud sind 25h Nutzungszeit pro Monat enthalten.</li>
-<li>Alternativ können Sie sich R installieren wie <a href="https://data-se.netlify.app/2021/11/30/installation-von-r-und-seiner-freunde/">hier beschrieben</a> (kostenlos).</li>
-<li>Werfen Sie einen Blick in das <a href="https://rstudio.cloud/project/3421620">RStudio Cloud Projekt dieses Kurses</a>.</li>
-</ul>
+<div id="funktionen---befehle" class="section level3" number="3.4.2">
+<h3><span class="header-section-number">3.4.2</span> Funktionen - “Befehle”</h3>
+<div id="vektoren" class="section level4" number="3.4.2.1">
+<h4><span class="header-section-number">3.4.2.1</span> Vektoren</h4>
+<p>Das, was R kann, ist in “Funktionen” hinterlegt.
+Ein Beispiel für eine solche Funktion könnte sein:
+“Berechne den Mittelwert” (schauen wir uns gleich an).</p>
+<p>Ein weiteres Beispiel für eine Funktion ist:
+“Erstelle eine Liste (Vektor) von Werten”.</p>
+<p>Das geht so:</p>
+<p>Der Befehl <code>c</code> (c wie <em>c</em>ombine) fügt mehrere Werte zusammen zu einer Liste (einem Vektor).</p>
+<p>Mit dem Zuweisungspfeil geben wir dieser Liste einen Namen, hier <code>Antworten</code>.
+Diese Liste besteht aus zwei Werten, zuerst <code>42</code>, dann kommt <code>43</code>.</p>
 </div>
-<div id="modulliteratur" class="section level2" number="1.6">
-<h2><span class="header-section-number">1.6</span> Modulliteratur</h2>
-<p>Ein Teil der Literatur ist über viele Hochschulbibliotheken als PDF herunterladen;
-andere Titel sind offen im Internet verfügbar.
-Oft müssen Sie per VPN angemeldet (in der Bib.) sein für Volltextzugriff, wenn Sie nicht auf dem Campus sind.</p>
-<p>Einen nützlichen, schon recht umfangreicher Einstieg bietet das Buch von <span class="citation">Sauer (<a href="#ref-sauer_moderne_2019" role="doc-biblioref">2019</a>)</span>.</p>
+<div id="unsere-erste-statistische-funktion" class="section level4" number="3.4.2.2">
+<h4><span class="header-section-number">3.4.2.2</span> Unsere erste statistische Funktion</h4>
+<p>Jetzt wird’s ernst. Jetzt kommt die Statistik.
+Berechnen wir also unsere erste statistische Funktion:
+Den Mittelwert. Puh.</p>
+<pre><code>## [1] 42.5</code></pre>
+<p>Sie hätten <code>Antworten</code> auch durch <code>c(42, 43)</code> ersetzen können,
+so haben Sie ja schließlich die Variable gerade definiert.</p>
 
+</div>
+</div>
 </div>
 </div>
 <h3>Literatur</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-sauer_moderne_2019" class="csl-entry">
-Sauer, Sebastian. 2019. <em>Moderne <span>Datenanalyse</span> Mit <span>R</span>: <span>Daten</span> Einlesen, Aufbereiten, Visualisieren Und Modellieren</em>. 1. Auflage 2019. <span>FOM</span>-<span>Edition</span>. Wiesbaden: Springer. <a href="https://www.springer.com/de/book/9783658215866">https://www.springer.com/de/book/9783658215866</a>.
+<div id="ref-ismay_moderndive_2019" class="csl-entry">
+Ismay, Chester, and Albert Kim. 2019. <span>“<span>ModernDive</span> - <span>An</span> <span>Introduction</span> to <span>Statistical</span> and <span>Data</span> <span>Sciences</span> via <span>R</span>.”</span> <a href="http://moderndive.com/">http://moderndive.com/</a>.
 </div>
 </div>
             </section>
@@ -324,8 +507,8 @@ Sauer, Sebastian. 2019. <em>Moderne <span>Datenanalyse</span> Mit <span>R</span>
           </div>
         </div>
       </div>
-
-<a href="hinweise.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="hinweise.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="daten-importieren.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -356,7 +539,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/index.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-Rahmen.Rmd",
 "text": "Edit"
 },
 "history": {

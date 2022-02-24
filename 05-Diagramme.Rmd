@@ -1,0 +1,99 @@
+
+
+```{r}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+
+# Diagramme
+
+
+Man kann tolle Diagramme in R erstellen,
+aber es braucht etwas Arbeit. 
+Zumindest mehr als fünf Minuten.
+Daher machen wir es uns hier bequem,
+und gehen einen schnelleren Weg,
+der auch schöne Diagramme in R erzeugt,
+aber dafür nicht so flexibel ist.
+
+Wir benutzen dafür das R-Paket `ggpubr`. 
+[Hier](https://rpkgs.datanovia.com/ggpubr/index.html) können Sie sich Demos anschauen.
+Sieht nicht schlecht aus, oder?
+
+Zuerst müssen wir es installieren. Das geht auf bekanntem Wege.
+Oder sie verwenden den folgenden Befehl,
+ist vielleicht komfortabler für Sie,
+Sie brauchen dann nur Copy-Pasten:
+
+
+```{r eval = FALSE}
+install.packages("ggpubr")  # nur einmal
+```
+
+
+Dann starten wir das Paket durch Anhaken
+oder wiederum mit einem Befehl:
+
+```{r}
+library("ggpubr")
+```
+
+
+
+## Zwei Gruppen vergleichen
+
+Ein Klassiker: Zwei Gruppen vergleichen hinsichtlich ihres Mitelwerts oder Medians. Fangen wir mal damit an.
+
+
+```{r}
+ggboxplot(mtcars, x = "am", y = "mpg")
+```
+
+
+Merke: Die Argumente der Funktionen bei `ggppubr` sind:
+
+1. Name der Tabelle
+2. x: Variable auf der X-Achse
+3. y: Variable auf der Y-Achse
+4. sonstiges
+
+
+Als nächstes, sehr ähnliches Diagramm, ein Violinenplot.
+Aber wir ergänzen noch  den Mittelwert pro Gruppe  (und dieses Mal mit der Anzahl der Zylinder auf der X-Achse):
+
+```{r}
+ggviolin(mtcars, x = "cyl", y = "mpg", add = "mean")
+```
+
+
+
+## Streudiagramm
+
+Gibt es wohl einen Zusammenhang von Spritverbrauch `mpg` und PS (`hp`)?
+
+```{r}
+ggscatter(mtcars, x = "hp", y = "mpg")
+```
+
+
+Pimp my Diagram:
+
+
+```{r}
+ggscatter(mtcars, 
+          x = "hp", y = "mpg", 
+          color = "indianred",
+          add = "reg.line",  # linearer Trend (Regression)
+          title = "Der Zusammenhang von PS und Spritverbrauch",
+          mean.point = TRUE)
+```
+
+
+
+
+## Fazit
+
+
+Ist doch schon recht ansehnlich, für fünf Minuten, oder?
