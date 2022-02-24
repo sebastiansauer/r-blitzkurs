@@ -48,8 +48,18 @@ knitr::write_bib(c(
 
 
 
-```{r}
-knitr::include_graphics("/Users/sebastiansaueruser/github-repos/__Archiv/stats-illustrations-Allison-Horst/rstats-artwork/rainbowr.gif")
+
+
+# Überblick
+
+
+
+
+
+```{r out.width="25%"}
+p_path <- "img/data_cowboy.png"
+stopifnot(file.exists(p_path))
+knitr::include_graphics(p_path)
 ```
 
 
@@ -57,9 +67,6 @@ knitr::include_graphics("/Users/sebastiansaueruser/github-repos/__Archiv/stats-i
 
 
 
-
-
-# Überblick
 
 
 ## tl;dr
@@ -70,7 +77,7 @@ knitr::include_graphics("/Users/sebastiansaueruser/github-repos/__Archiv/stats-i
 - online (Zoom)
 - Dozent: Sebastian Sauer
 - Vorbereitung: Konto bei RStudio Cloud anlegen
-
+- Die zentrale Software ist diess [RStudio Cloud Projekt](https://rstudio.cloud/project/3421620).
 
 
 ## Was Sie hier lernen und wozu das gut ist
