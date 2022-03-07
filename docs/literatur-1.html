@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Kapitel 7 Inferenzstatistik | R-Blitzkurs ⚡</title>
+  <title>Literatur | R-Blitzkurs ⚡</title>
   <meta name="description" content="Ein kurzer Einführungskurs in die Datenanalyse mit R" />
   <meta name="generator" content="bookdown 0.24.2 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Kapitel 7 Inferenzstatistik | R-Blitzkurs ⚡" />
+  <meta property="og:title" content="Literatur | R-Blitzkurs ⚡" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Kapitel 7 Inferenzstatistik | R-Blitzkurs ⚡" />
+  <meta name="twitter:title" content="Literatur | R-Blitzkurs ⚡" />
   
   <meta name="twitter:description" content="Ein kurzer Einführungskurs in die Datenanalyse mit R" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="diagramme.html"/>
-<link rel="next" href="literatur-1.html"/>
+<link rel="prev" href="inferenzstatistik.html"/>
+
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -261,120 +261,32 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="inferenzstatistik" class="section level1" number="7">
-<h1><span class="header-section-number">Kapitel 7</span> Inferenzstatistik</h1>
-<p>Kommen wir zur “Königsklasse” der Datenanalyse: Der Inferenzstatistik (?)</p>
-<p>Generationen von Studentis haben Sie schon <del>gehasst</del>, sich mit ihr kritisch auseinander gesetzt,
-Semester um Semester.</p>
-<p>Wir machen da kurzen Prozess. Ein paar Minuten müssen reichen.</p>
-<div id="die-regression-als-schweizer-taschenmesser" class="section level2" number="7.1">
-<h2><span class="header-section-number">7.1</span> Die Regression als Schweizer Taschenmesser</h2>
-<p>Vielleicht hat es Ihnen Ihr Statistik-Dozenti nicht gesagt,
-aber: Es reicht, wenn man ein einziges Verfahren der Inferenzstatistik kann.
-Ja, eines.
-Nein, ich kann Ihnen nicht sagen, warum Sie sich dann ewig mit dem Zeugs herumschlagen mussten…</p>
-<p>Gut, wenn Sie Statistik-Profi werden möchten, dann lohnt es sich, noch etwas breiter zu
-schauen, aber auch (und gerade!) unter Profis ist unstrittig, dass
-die <em>Regressionsanalyse</em> das vermutlich beste Werkzeug im Koffer ist.</p>
-<p>Die Wahrheit ist: Sie können mit der Regressionsanalyse alle tyischen Fragestellungen beantworten.
-Auf t-Test, Varianzanalyse, Kovarianzanalyse, Chi-Quadrat-Test und so weiter können Sie getrost verzichten.
-Das sind alles Spezialfälle der Regressionsanalyse.</p>
-<p>Also, schauen wir uns mal eine Regressionsanalyse an.</p>
-<p>Übrigens, eine Regressionsanalyse nennt man auch <em>lineares Modell</em>.</p>
-</div>
-<div id="unterschied-im-spritverbrauch-zwischen-den-getriebarten" class="section level2" number="7.2">
-<h2><span class="header-section-number">7.2</span> Unterschied im Spritverbrauch zwischen den Getriebarten</h2>
-<p>Forschungsfrage: <em>Unterscheiden sich die Mittelwerte des Spritverbrauchs der beiden Gruppen von Getriebart (manuelle Schaltung vs. Automatik-Schaltung)?</em></p>
-<p>Das könnte man mit einem t-Test rechnen, aber die Regressionsanalyse bringt
-das rechnerisch exakt gleiche Ergebnis<a href="literatur-1.html#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
-<p>In R heißt der Befehl für eine Regressionsanalyse <code>lm()</code> (wie lineares Modell).</p>
-<p>In unserem Fall:</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="inferenzstatistik.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(mpg <span class="sc">~</span> am, <span class="at">data =</span> mtcars)  <span class="co"># AV ~ UV</span></span></code></pre></div>
-<pre><code>## 
-## Call:
-## lm(formula = mpg ~ am, data = mtcars)
-## 
-## Coefficients:
-## (Intercept)           am  
-##      17.147        7.245</code></pre>
-<p>Dabei ist <code>mpg</code> die AV (Zielvariable) und <code>am</code> die UV (Inputvariable), und <code>data</code> spezifiziert den Namen der Datentabelle.</p>
-<p>Das Ergebnis sagt uns, dass es einen Unterschied von ca. 7,3 Meilen pro Gallone Sprit gibt (im Mittelwert) zwischen den Gruppen.</p>
-<p>Viellicht visualisieren wir uns das schnell mal:</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="inferenzstatistik.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggscatter</span>(mtcars, <span class="at">x =</span> <span class="st">&quot;am&quot;</span>, <span class="at">y =</span> <span class="st">&quot;mpg&quot;</span>,</span>
-<span id="cb35-2"><a href="inferenzstatistik.html#cb35-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">add =</span> <span class="st">&quot;reg.line&quot;</span>,</span>
-<span id="cb35-3"><a href="inferenzstatistik.html#cb35-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">conf.int =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb35-4"><a href="inferenzstatistik.html#cb35-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">mean.point =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb35-5"><a href="inferenzstatistik.html#cb35-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">cor.coef =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
-<p><img src="chunk-img/unnamed-chunk-37-1.png" width="100%" style="display: block; margin: auto;" /></p>
-<p>Die Linie im Diagramm ist die Regressionslinie. Der graue Schleier das 95%-Konfidenzintervall.</p>
-<p>Und: wir haben schon einen p-Wert, und zwar für die Korrelation (R) der beiden Größen.
-Das ist aber nicht der p-Wert für den Gruppenunterschied.
-Da stellt sich die Frage, wenn es mehrere p-Werte gibt, welche man nehmen soll.
-Naja, am besten den, der einem gut in den Kram passt.
-Oh, hab ich das gerade gesagt? Naja, so machen es jedenfalls die meisten.</p>
-</div>
-<div id="aber-ich-liebe-den-p-wert" class="section level2" number="7.3">
-<h2><span class="header-section-number">7.3</span> Aber ich liebe den p-Wert!</h2>
-<p>Ok, ich liebe ihn nicht, aber alle Welt spricht von den p-Wert.
-Ohne p-Wert, habe ich schmerzlich gelernt, kann man nicht publizieren,
-aber mit einem schönen p-Wert, da stünde die Welt offen, hab ich gehört.</p>
-<p>Also gut, holen wir uns den p-Wert für den Gruppenunterschied. Dafür müssen wir Folgendes tun:</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="inferenzstatistik.html#cb36-1" aria-hidden="true" tabindex="-1"></a>lm1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(mpg <span class="sc">~</span> am, <span class="at">data =</span> mtcars)</span>
-<span id="cb36-2"><a href="inferenzstatistik.html#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm1)</span></code></pre></div>
-<pre><code>## 
-## Call:
-## lm(formula = mpg ~ am, data = mtcars)
-## 
-## Residuals:
-##     Min      1Q  Median      3Q     Max 
-## -9.3923 -3.0923 -0.2974  3.2439  9.5077 
-## 
-## Coefficients:
-##             Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept)   17.147      1.125  15.247 1.13e-15 ***
-## am             7.245      1.764   4.106 0.000285 ***
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-## 
-## Residual standard error: 4.902 on 30 degrees of freedom
-## Multiple R-squared:  0.3598, Adjusted R-squared:  0.3385 
-## F-statistic: 16.86 on 1 and 30 DF,  p-value: 0.000285</code></pre>
-<p>Wir “kippen” also das Ergebnis von <code>lm()</code> in eine Variable mit dem Namen <code>lm1</code>.
-Mit dem Befehl <code>summary()</code> spuckt uns R endlich dann mehr Details aus.
-Eigentlich sogar ziemlich viele, puh.</p>
-<p>Ganz unten in der Ausgabe steht, endlich: <code>p-value: 0.000285</code>.</p>
-<p>Und dieser Wert ist kleiner als 5%, weswegen wir unser Ergebnis als <em>signifikant</em> adeln dürfen.
-Schick, nicht?!</p>
-<p>Auf dieser Basis können wir jetzt sagen:</p>
-<blockquote>
-<p>Das Ergebnis zeigt einen signifikanten Unterschied im mittleren Spritverbrauch zwischen den beiden Gruppen.</p>
-</blockquote>
-<p>Wie man den p-Wert korrekt interpretiert,
-das sparen wir uns hier.
-Für die Praxis genügt es vielen (leider Gottes) zu sagen: <span class="math inline">\(p&lt;.05\)</span>, alles paletti!</p>
-</div>
-<div id="visualisierung" class="section level2" number="7.4">
-<h2><span class="header-section-number">7.4</span> Visualisierung</h2>
-<p>Nutzen wir zur Visualisierung unseres Regressionsmodells wieder das Paket <code>ggstatsplot</code>:</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="inferenzstatistik.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggcoefstats</span>(lm1)</span></code></pre></div>
-<p><img src="chunk-img/unnamed-chunk-39-1.png" width="100%" style="display: block; margin: auto;" /></p>
-<p>Es gibt einen <a href="https://indrajeetpatil.github.io/ggstatsplot/reference/ggcoefstats.html">Haufen Konfigurationsmöglichkeiten für diese Funktion</a>.
-Aber natürlich ist man flexibler,
-wenn man das Diagramm gleich selber von Grund auf erstellen würde.</p>
-</div>
-<div id="fazit-1" class="section level2" number="7.5">
-<h2><span class="header-section-number">7.5</span> Fazit</h2>
-<p>Mit gleicher Manier, d.h. via <code>lm()</code> können wir (fast) beliebige Forschungsfragen auf ihre Signifikanz hin untersuchen.</p>
+<div id="literatur-1" class="section level1 unnumbered">
+<h1>Literatur</h1>
 
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div class="csl-entry">
+Ismay, Chester, and Albert Kim. 2019. <span>“<span>ModernDive</span> - <span>An</span> <span>Introduction</span> to <span>Statistical</span> and <span>Data</span> <span>Sciences</span> via <span>R</span>.”</span> <a href="http://moderndive.com/">http://moderndive.com/</a>.
 </div>
+<div class="csl-entry">
+Sauer, Sebastian. 2019. <em>Moderne <span>Datenanalyse</span> Mit <span>R</span>: <span>Daten</span> Einlesen, Aufbereiten, Visualisieren Und Modellieren</em>. 1. Auflage 2019. <span>FOM</span>-<span>Edition</span>. Wiesbaden: Springer. <a href="https://www.springer.com/de/book/9783658215866">https://www.springer.com/de/book/9783658215866</a>.
+</div>
+</div>
+</div>
+<div class="footnotes footnotes-end-of-document">
+<hr />
+<ol>
+<li id="fn1"><p>Durchgeführt am 2022-02-24, 17:21 CET<a href="rahmen.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>unter der Annahme identischer Varianzen in den Gruppen. Diese Annahme hat der t-Test zwar auch, aber in vielen Softwarepaketen wird dann stillschweigend zur Welch-Variante des d-Tests umgeschwenkt, bei der diese Annahme aufgegeben wird.<a href="inferenzstatistik.html#fnref2" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="diagramme.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="literatur-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="inferenzstatistik.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -405,7 +317,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/06-Inferenz.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/07-references.Rmd",
 "text": "Edit"
 },
 "history": {

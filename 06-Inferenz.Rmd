@@ -122,6 +122,21 @@ das sparen wir uns hier.
 Für die Praxis genügt es vielen (leider Gottes) zu sagen: $p<.05$, alles paletti!
 
 
+## Visualisierung
+
+
+Nutzen wir zur Visualisierung unseres Regressionsmodells wieder das Paket `ggstatsplot`:
+
+
+```{r}
+ggcoefstats(lm1)
+```
+
+
+Es gibt einen [Haufen Konfigurationsmöglichkeiten für diese Funktion](https://indrajeetpatil.github.io/ggstatsplot/reference/ggcoefstats.html).
+Aber natürlich ist man flexibler,
+wenn man das Diagramm gleich selber von Grund auf erstellen würde.
+
 
 ## Fazit
 

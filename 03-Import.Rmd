@@ -3,6 +3,8 @@
 # Daten importieren
 
 
+## CSV-Dateien importieren
+
 In der Datenanalyse ist das gebräuchlichste Format für Daten in Tabellenform die *CSV-Datei*.
 Das hat den Grund, weil dieses Format technisch schön einfach ist.
 Für uns Endverbraucher tut das nichts groß zur Sache, die CSV-Datei beherbergt 
@@ -58,7 +60,96 @@ knitr::include_graphics("img/environment.png")
 Ist sie nicht schön (s. Abbildung \@ref(fig:mtcars-head)? Ein Prachtexampler einer Tabelle, nicht wahr?
 
 
+
+
 ```{r mtcars-head, fig.cap = "Die ersten Zeilen der Tabelle 'mtcars'", out.width="50%"}
 knitr::include_graphics("img/mtcars-head.png")
 ```
+
+
+## CSV-Dateien von innen
+
+Ein Blick in die Motorhaube: 
+So sieht eine CSV-Datei aus, wenn Sie sie mit einem Text-Editor öffnen. 
+
+
+```
+"","mpg","cyl","disp","hp","drat","wt","qsec","vs","am","gear","carb"
+"Mazda RX4",21,6,160,110,3.9,2.62,16.46,0,1,4,4
+"Mazda RX4 Wag",21,6,160,110,3.9,2.875,17.02,0,1,4,4
+"Datsun 710",22.8,4,108,93,3.85,2.32,18.61,1,1,4,1
+"Hornet 4 Drive",21.4,6,258,110,3.08,3.215,19.44,1,0,3,1
+"Hornet Sportabout",18.7,8,360,175,3.15,3.44,17.02,0,0,3,2
+```
+
+
+Wir erkennen: Es ist eine sehr einfach aufgebaute Textdatei.
+Wenn Sie lange genug in die Matrix starren, 
+erkennen Sie die Spalten.
+
+
+
+## SPSS- und Excel-Dateien importieren
+
+
+
+Daten in den Formaten von Minitab, SAS, SPSS, Stata, Excel und andere kann man mit dem
+Paket `rio`` importieren:
+
+
+```{r}
+library(rio)  # muss installiert sein :-)
+```
+
+
+Dann suchen wir uns einen Datensatz, z.B. ihn hier:
+
+```{r echo = TRUE}
+spss_path <- "https://cehd.gmu.edu/assets/dimitrovbook/Anxiety%202.sav"
+```
+
+### SPSS
+
+
+Probieren wir es mit SPSS-Daten aus:
+
+```{r echo = TRUE}
+d <- import(spss_path)
+head(d)
+```
+
+Die Daten stammen aus [dieser Quelle](https://cehd.gmu.edu/book/dimitrov/spss).
+
+### Excel
+
+Oder mit Excel-Daten (.xsl und .xlsx):
+
+
+```{r echo = TRUE}
+excel_path <- "https://file-examples-com.github.io/uploads/2017/02/file_example_XLS_10.xls"
+xlsx_path <- "https://file-examples-com.github.io/uploads/2017/02/file_example_XLSX_10.xlsx"
+```
+
+
+```{r}
+d2 <- import(excel_path)
+head(d2)
+```
+
+
+```{r}
+d3 <- import(xlsx_path)
+head(d3)
+```
+
+
+Die Daten stammen aus [dieser Quelle](https://file-examples.com/index.php/sample-documents-download/sample-xls-download/).
+
+
+
+## Literatur
+
+
+Weitere Hinweise findet man z.B. in @sauer_moderne_2019 oder in @ismay_moderndive_2019.
+
 

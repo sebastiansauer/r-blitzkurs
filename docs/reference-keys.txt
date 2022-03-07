@@ -57,6 +57,12 @@ funktionen---befehle
 vektoren
 unsere-erste-statistische-funktion
 daten-importieren
+csv-dateien-importieren
+csv-dateien-von-innen
+spss--und-excel-dateien-importieren
+spss
+excel
+literatur
 deskriptive-statistik
 metrische-variablen
 nominale-variablen
@@ -64,9 +70,13 @@ subgruppenanalyse
 diagramme
 zwei-gruppen-vergleichen
 streudiagramm
+convenience-fooddiagramme
+gruppenvergleich
+streudiagramme
 fazit
 inferenzstatistik
 die-regression-als-schweizer-taschenmesser
 unterschied-im-spritverbrauch-zwischen-den-getriebarten
 aber-ich-liebe-den-p-wert
+visualisierung
 fazit-1

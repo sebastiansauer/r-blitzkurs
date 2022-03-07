@@ -91,7 +91,56 @@ ggscatter(mtcars,
 ```
 
 
+## Convenience ~~Food~~Diagramme
 
+Mit dem R-Paket [ggstatsplot](https://indrajeetpatil.github.io/ggstatsplot/index.html) 
+kann man auf komfortable Art publikationsreife Diagramme erzeugen. 
+
+Installieren wir zuerst das Paket:
+
+
+```{r eval = FALSE}
+install.packages("ggstatsplot")
+```
+
+
+Und dann starten wir es:
+
+```{r}
+library("ggstatsplot")
+```
+
+
+### Gruppenvergleich
+
+
+
+```{r}
+ggbetweenstats(mtcars,x = am, y = mpg)
+```
+
+Weitere Hinweise zum Gruppenvergleich finden sich [hier](https://indrajeetpatil.github.io/ggstatsplot/articles/web_only/ggbetweenstats.html).
+
+
+### Streudiagramme
+
+
+```{r}
+ggscatterstats(mtcars, x = hp, y = mpg)
+```
+
+Wenn Sie folgende Fehlermeldung bekommen:
+
+`
+Error: Package 'ggside' is required for this function to work.
+  Please install it by running install.packages('ggside').
+`
+
+Dann sollten Sie das angefragte Paket, `ggside` noch installieren auf üblichem Weg.
+
+
+
+[Quelle](https://indrajeetpatil.github.io/ggstatsplot/articles/web_only/ggscatterstats.html)
 
 ## Fazit
 
