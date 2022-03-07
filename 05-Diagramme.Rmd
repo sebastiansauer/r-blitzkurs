@@ -149,7 +149,7 @@ Ist doch schon recht ansehnlich, für fünf Minuten, oder?
 
 
 
-## Weiterführende Hinweise
+## Literaturhinweise
 
 Kapitel 11 bis 14 in @sauer_moderne_2019 geben eine Einführung in Datenvisualisierung mit `ggplot2`. Ein ganzes (und gutes) Buch zu dem, frei verfügbar, bietet Claus Wilke 
 [hier](https://clauswilke.com/dataviz/).

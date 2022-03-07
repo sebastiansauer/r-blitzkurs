@@ -92,6 +92,7 @@ knitr::include_graphics("https://d33wubrfki0l68.cloudfront.net/8b21462ee6be04505
 
 
 
+
 ### R-Studio Cloud
 
 
@@ -104,6 +105,12 @@ Ein Vorteil ist, dass man als Nutzer nichts installieren muss.
 ```{r rstudio-cloud, fig.cap = "RStudio Cloud"}
 knitr::include_graphics("img/rstudio-cloud.png")
 ```
+
+
+
+### Installation
+
+Lesen Sie [hier](https://data-se.netlify.app/2021/11/30/installation-von-r-und-seiner-freunde/#installation) die Installation von R und seiner Freunde nach.
 
 
 
@@ -390,7 +397,7 @@ so haben Sie ja schließlich die Variable gerade definiert.
 
 
 
-## Weiterführende Hinweise
+## Literaturhinweise
 
 "Warum R? Warum, R?" heißt ein Kapitel in @sauer_moderne_2019, das einiges zum Pro und Contra von R aufführt.
 In Kapitel 3 in der gleichen Quelle finden sich viele Hinweise, wie man R startet.

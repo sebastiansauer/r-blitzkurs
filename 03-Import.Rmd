@@ -147,7 +147,7 @@ Die Daten stammen aus [dieser Quelle](https://file-examples.com/index.php/sample
 
 
 
-## Literatur
+## Literaturhinweise
 
 
 Weitere Hinweise findet man z.B. in @sauer_moderne_2019 oder in @ismay_moderndive_2019.

@@ -162,4 +162,9 @@ Einführungen finden sich z.B. im [Kapitel 3](https://moderndive.com/3-wrangling
 
 
 
+## Literaturhinweise
+
+
+In englischer Sprache findet sich ein Überblick an deskriptiver Statistik mit R aus angewandter Perspektive bei @cetinkaya-rundel_introduction_2021, [Kapitel 4-6](https://openintro-ims.netlify.app/explore-numerical.html).
+Alternativ bietet @sauer_moderne_2019 einen Überblick (Kapitel 8).
 

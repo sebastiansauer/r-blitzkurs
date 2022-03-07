@@ -147,7 +147,7 @@ Mit gleicher Manier, d.h. via `lm()` können wir (fast) beliebige Forschungsfrag
 ## Weiterführende Hinweise
 
 Grundlagen des Modellierens finden sich in @sauer_moderne_2019. 
-Eine nützliche und moderne Einführung, frei verfügbar, findet sich [hier](https://openintro-ims.netlify.app/).
+Eine nützliche und moderne Einführung, frei verfügbar, findet sich bei @cetinkaya-rundel_introduction_2021, [hier](https://openintro-ims.netlify.app/).
 
 
 
