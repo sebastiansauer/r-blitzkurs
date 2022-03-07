@@ -133,10 +133,10 @@ Wenn Sie folgende Fehlermeldung bekommen:
 
 `
 Error: Package 'ggside' is required for this function to work.
-  Please install it by running install.packages('ggside').
+Please install it by running install.packages('ggside').
 `
 
-Dann sollten Sie das angefragte Paket, `ggside` noch installieren auf üblichem Weg.
+Dann sollten Sie das angefragte Paket, `ggside`, noch installieren auf üblichem Weg.
 
 
 
@@ -146,3 +146,12 @@ Dann sollten Sie das angefragte Paket, `ggside` noch installieren auf üblichem 
 
 
 Ist doch schon recht ansehnlich, für fünf Minuten, oder?
+
+
+
+## Weiterführende Hinweise
+
+Kapitel 11 bis 14 in @sauer_moderne_2019 geben eine Einführung in Datenvisualisierung mit `ggplot2`. Ein ganzes (und gutes) Buch zu dem, frei verfügbar, bietet Claus Wilke 
+[hier](https://clauswilke.com/dataviz/).
+
+

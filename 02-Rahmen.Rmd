@@ -390,5 +390,12 @@ so haben Sie ja schließlich die Variable gerade definiert.
 
 
 
+## Weiterführende Hinweise
+
+"Warum R? Warum, R?" heißt ein Kapitel in @sauer_moderne_2019, das einiges zum Pro und Contra von R aufführt.
+In Kapitel 3 in der gleichen Quelle finden sich viele Hinweise, wie man R startet.
+Alternativ bietet [Kapitel 1](https://moderndive.com/1-getting-started.html) von @ismay_moderndive_2019 einen guten Überblick.
+
+
 
 

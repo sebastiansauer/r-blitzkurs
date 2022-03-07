@@ -144,3 +144,22 @@ freq_table(mtcars, cyl)
 ```
 
 
+## Vertiefung: Datenjudo `dplyr` 
+
+
+Taucht man etwas tiefer in die Datenanalyse ein,
+so tauchen früher oder später (meist früher) Probleme des "Datenjudo" auf:
+
+- Man möchte fehlende Werte ersetzen
+- Man möchte Werte umkodieren
+- Man muss die Tabelle umformatieren
+
+Für Aufgaben solcher Art ist das R-Paket `dplyr` bestens geeignet.
+
+
+Einführungen finden sich z.B. im [Kapitel 3](https://moderndive.com/3-wrangling.html) von @ismay_moderndive_2019 oder Kapitel 7 und 9 bei @sauer_moderne_2019.
+
+
+
+
+

@@ -144,5 +144,11 @@ wenn man das Diagramm gleich selber von Grund auf erstellen würde.
 Mit gleicher Manier, d.h. via `lm()` können wir (fast) beliebige Forschungsfragen auf ihre Signifikanz hin untersuchen.
 
 
+## Weiterführende Hinweise
+
+Grundlagen des Modellierens finden sich in @sauer_moderne_2019. 
+Eine nützliche und moderne Einführung, frei verfügbar, findet sich [hier](https://openintro-ims.netlify.app/).
+
+
 
 

@@ -56,6 +56,7 @@ variablen
 funktionen---befehle
 vektoren
 unsere-erste-statistische-funktion
+weiterführende-hinweise
 daten-importieren
 csv-dateien-importieren
 csv-dateien-von-innen
@@ -67,6 +68,7 @@ deskriptive-statistik
 metrische-variablen
 nominale-variablen
 subgruppenanalyse
+vertiefung-datenjudo-dplyr
 diagramme
 zwei-gruppen-vergleichen
 streudiagramm
@@ -74,9 +76,11 @@ convenience-fooddiagramme
 gruppenvergleich
 streudiagramme
 fazit
+weiterführende-hinweise-1
 inferenzstatistik
 die-regression-als-schweizer-taschenmesser
 unterschied-im-spritverbrauch-zwischen-den-getriebarten
 aber-ich-liebe-den-p-wert
 visualisierung
 fazit-1
+weiterführende-hinweise-2
