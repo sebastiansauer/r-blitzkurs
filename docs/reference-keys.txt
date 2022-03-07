@@ -57,11 +57,12 @@ variablen
 funktionen---befehle
 vektoren
 unsere-erste-statistische-funktion
+hilfe
 literaturhinweise
 daten-importieren
 csv-dateien-importieren
 csv-dateien-von-innen
-spss--und-excel-dateien-importieren
+spss--und-excel-dateien-importieren-mit-rio
 spss
 excel
 literaturhinweise-1

@@ -22,7 +22,7 @@ Natürlich kann man sich auch andere sinnvolle Darstellungen dieses Ablaufs vors
 
 R ist *open source*, jeder kann beitragen. Das tuen auch viele. 
 Daher gibt es viel mehr Entwickler für R wie für ein propriäteres Programm wie z.B. SPSS.
-Der Unterschied in der Zahl der Entwickler ist im Diagramm \@ref(fig:r-spsss) dargestellt.
+Der Unterschied in der Zahl der Entwickler ist im Diagramm \@ref(fig:r-spss) dargestellt.
 Achtung: Die Diagrammgrößen sind hier rein "gefühlt" und sollen lediglich einen Eindruck vermitteln.
 
 
@@ -45,7 +45,7 @@ ggplot(d) +
 
 
 Für einen genaueren Eindruck kann man viele Statistiken heranziehen.
-Nehmen wir die Anzahl der Suchanfragen bei <stackoverflow.com>,
+Nehmen wir die Anzahl der Suchanfragen bei [stackoverflow.com](www.stackoverflow.com),
 dem größten FAQ-Forum für Software-Entwicklung.
 Wir vergleichen Suchanfragen mit dem Tag `[r]` zu Suchanfragen mit dem Tag `[spss]`^[Durchgeführt am 2022-02-24, 17:21 CET]. Die Ergebnisse sind in Abbildung \@ref(fig:stackoverflow1) dargestellt.
 
@@ -396,11 +396,20 @@ Sie hätten `Antworten` auch durch `c(42, 43)` ersetzen können,
 so haben Sie ja schließlich die Variable gerade definiert.
 
 
+## Hilfe
+
+- Wo finde ich Hilfe zu einer bestimmten Funktion, z.B. `fun`? Geben Sie dazu folgenden R-Befehl ein: `help(fun)`.
+- In welchem Paket wohnt meine R-Funktion? Suchen Sie nach der Funktion [auf dieser Seite](https://www.rdocumentation.org/).
+- Ich weiß nicht, wie der R-Befehl funktioniert? Vermutlich haben andere Ihr Problem auch, und meistens hat irgendwer das Problem schon gelöst. Am besten suchen Sie mal auf [Stackoverflow](www.stackoverflow.com).
+- Ich muss mal grundlegend verstehen, wozu ein bestimmten R-Paket gut ist. Lesen Sie die Dokumenation ("Vignette") eines R-Pakets durch. Für das Paket `dplyr` bekommen Sie so einen Überblick über die verfügbaren Vignetten diese Pakets: `vignette(package = "dplyr")`. Dann suchen Sie sich aus der angezeigten Liste eine Vignette raus; mit `vignette("rowwise")` können Sie sich dann die gewünschte Vignette (z.B. `rowwise`) anzeigen lassen.
+
 
 ## Literaturhinweise
 
 "Warum R? Warum, R?" heißt ein Kapitel in @sauer_moderne_2019, das einiges zum Pro und Contra von R aufführt.
-In Kapitel 3 in der gleichen Quelle finden sich viele Hinweise, wie man R startet.
+In Kapitel 3 in der gleichen Quelle finden sich viele Hinweise, wie man R startet;
+In Kapitel 4 werden Grundlagen von "Errisch" erläutert;
+Kapitel 5 führt in Datenstrukturen von R ein (schon etwas anspruchsvoller).
 Alternativ bietet [Kapitel 1](https://moderndive.com/1-getting-started.html) von @ismay_moderndive_2019 einen guten Überblick.
 
 

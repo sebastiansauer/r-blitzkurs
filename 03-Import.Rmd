@@ -57,7 +57,7 @@ knitr::include_graphics("img/environment.png")
 
 
 
-Ist sie nicht schön (s. Abbildung \@ref(fig:mtcars-head)? Ein Prachtexampler einer Tabelle, nicht wahr?
+Ist sie nicht schön (s. Abbildung \@ref(fig:mtcars-head))? Ein Prachtexampler einer Tabelle, nicht wahr?
 
 
 
@@ -89,12 +89,12 @@ erkennen Sie die Spalten.
 
 
 
-## SPSS- und Excel-Dateien importieren
+## SPSS- und Excel-Dateien importieren mit `rio`
 
 
 
-Daten in den Formaten von Minitab, SAS, SPSS, Stata, Excel und andere kann man mit dem
-Paket `rio`` importieren:
+Daten in den Formaten von Minitab, SAS, SPSS, Stata, Excel, CSV und andere kann man mit dem
+Paket `rio` importieren:
 
 
 ```{r}

@@ -204,13 +204,14 @@ div.csl-indent {
 <li class="chapter" data-level="3.4.1" data-path="rahmen.html"><a href="rahmen.html#variablen"><i class="fa fa-check"></i><b>3.4.1</b> Variablen</a></li>
 <li class="chapter" data-level="3.4.2" data-path="rahmen.html"><a href="rahmen.html#funktionen---befehle"><i class="fa fa-check"></i><b>3.4.2</b> Funktionen - “Befehle”</a></li>
 </ul></li>
-<li class="chapter" data-level="3.5" data-path="rahmen.html"><a href="rahmen.html#literaturhinweise"><i class="fa fa-check"></i><b>3.5</b> Literaturhinweise</a></li>
+<li class="chapter" data-level="3.5" data-path="rahmen.html"><a href="rahmen.html#hilfe"><i class="fa fa-check"></i><b>3.5</b> Hilfe</a></li>
+<li class="chapter" data-level="3.6" data-path="rahmen.html"><a href="rahmen.html#literaturhinweise"><i class="fa fa-check"></i><b>3.6</b> Literaturhinweise</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="daten-importieren.html"><a href="daten-importieren.html"><i class="fa fa-check"></i><b>4</b> Daten importieren</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="daten-importieren.html"><a href="daten-importieren.html#csv-dateien-importieren"><i class="fa fa-check"></i><b>4.1</b> CSV-Dateien importieren</a></li>
 <li class="chapter" data-level="4.2" data-path="daten-importieren.html"><a href="daten-importieren.html#csv-dateien-von-innen"><i class="fa fa-check"></i><b>4.2</b> CSV-Dateien von innen</a></li>
-<li class="chapter" data-level="4.3" data-path="daten-importieren.html"><a href="daten-importieren.html#spss--und-excel-dateien-importieren"><i class="fa fa-check"></i><b>4.3</b> SPSS- und Excel-Dateien importieren</a>
+<li class="chapter" data-level="4.3" data-path="daten-importieren.html"><a href="daten-importieren.html#spss--und-excel-dateien-importieren-mit-rio"><i class="fa fa-check"></i><b>4.3</b> SPSS- und Excel-Dateien importieren mit <code>rio</code></a>
 <ul>
 <li class="chapter" data-level="4.3.1" data-path="daten-importieren.html"><a href="daten-importieren.html#spss"><i class="fa fa-check"></i><b>4.3.1</b> SPSS</a></li>
 <li class="chapter" data-level="4.3.2" data-path="daten-importieren.html"><a href="daten-importieren.html#excel"><i class="fa fa-check"></i><b>4.3.2</b> Excel</a></li>
@@ -284,7 +285,7 @@ Figure 3.1: Der Prozess der Datenanalyse
 <h2><span class="header-section-number">3.2</span> Warum R?</h2>
 <p>R ist <em>open source</em>, jeder kann beitragen. Das tuen auch viele.
 Daher gibt es viel mehr Entwickler für R wie für ein propriäteres Programm wie z.B. SPSS.
-Der Unterschied in der Zahl der Entwickler ist im Diagramm <a href="#fig:r-spsss"><strong>??</strong></a> dargestellt.
+Der Unterschied in der Zahl der Entwickler ist im Diagramm <a href="rahmen.html#fig:r-spss">3.2</a> dargestellt.
 Achtung: Die Diagrammgrößen sind hier rein “gefühlt” und sollen lediglich einen Eindruck vermitteln.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:r-spss"></span>
 <img src="chunk-img/r-spss-1.png" alt="Gefühlter Vergleich der Anzahl der Entwickler nach Statistik-Software" width="100%" />
@@ -293,7 +294,7 @@ Figure 3.2: Gefühlter Vergleich der Anzahl der Entwickler nach Statistik-Softwa
 </p>
 </div>
 <p>Für einen genaueren Eindruck kann man viele Statistiken heranziehen.
-Nehmen wir die Anzahl der Suchanfragen bei &lt;stackoverflow.com&gt;,
+Nehmen wir die Anzahl der Suchanfragen bei <a href="www.stackoverflow.com">stackoverflow.com</a>,
 dem größten FAQ-Forum für Software-Entwicklung.
 Wir vergleichen Suchanfragen mit dem Tag <code>[r]</code> zu Suchanfragen mit dem Tag <code>[spss]</code><a href="literatur.html#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. Die Ergebnisse sind in Abbildung <a href="rahmen.html#fig:stackoverflow1">3.3</a> dargestellt.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:stackoverflow1"></span>
@@ -520,10 +521,21 @@ so haben Sie ja schließlich die Variable gerade definiert.</p>
 </div>
 </div>
 </div>
-<div id="literaturhinweise" class="section level2" number="3.5">
-<h2><span class="header-section-number">3.5</span> Literaturhinweise</h2>
+<div id="hilfe" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> Hilfe</h2>
+<ul>
+<li>Wo finde ich Hilfe zu einer bestimmten Funktion, z.B. <code>fun</code>? Geben Sie dazu folgenden R-Befehl ein: <code>help(fun)</code>.</li>
+<li>In welchem Paket wohnt meine R-Funktion? Suchen Sie nach der Funktion <a href="https://www.rdocumentation.org/">auf dieser Seite</a>.</li>
+<li>Ich weiß nicht, wie der R-Befehl funktioniert? Vermutlich haben andere Ihr Problem auch, und meistens hat irgendwer das Problem schon gelöst. Am besten suchen Sie mal auf <a href="www.stackoverflow.com">Stackoverflow</a>.</li>
+<li>Ich muss mal grundlegend verstehen, wozu ein bestimmten R-Paket gut ist. Lesen Sie die Dokumenation (“Vignette”) eines R-Pakets durch. Für das Paket <code>dplyr</code> bekommen Sie so einen Überblick über die verfügbaren Vignetten diese Pakets: <code>vignette(package = "dplyr")</code>. Dann suchen Sie sich aus der angezeigten Liste eine Vignette raus; mit <code>vignette("rowwise")</code> können Sie sich dann die gewünschte Vignette (z.B. <code>rowwise</code>) anzeigen lassen.</li>
+</ul>
+</div>
+<div id="literaturhinweise" class="section level2" number="3.6">
+<h2><span class="header-section-number">3.6</span> Literaturhinweise</h2>
 <p>“Warum R? Warum, R?” heißt ein Kapitel in <span class="citation">Sauer (<a href="#ref-sauer_moderne_2019" role="doc-biblioref">2019</a>)</span>, das einiges zum Pro und Contra von R aufführt.
-In Kapitel 3 in der gleichen Quelle finden sich viele Hinweise, wie man R startet.
+In Kapitel 3 in der gleichen Quelle finden sich viele Hinweise, wie man R startet;
+In Kapitel 4 werden Grundlagen von “Errisch” erläutert;
+Kapitel 5 führt in Datenstrukturen von R ein (schon etwas anspruchsvoller).
 Alternativ bietet <a href="https://moderndive.com/1-getting-started.html">Kapitel 1</a> von <span class="citation">Ismay and Kim (<a href="#ref-ismay_moderndive_2019" role="doc-biblioref">2019</a>)</span> einen guten Überblick.</p>
 
 </div>
