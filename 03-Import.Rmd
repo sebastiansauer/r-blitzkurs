@@ -145,9 +145,17 @@ head(d2)
 
 
 
+## Export
+
+Und hier ist Ihre "RExit-Strategie":
+
+```{r eval = FALSE}
+export(d2, file = "excel-test.xlsx")
+export(mtcars, file = "mtcars.csv")
+```
 
 
-
+Mit `export()` (aus dem Paket `rio`) können Sie Tabellen aus R exportieren.
 
 
 ## Literaturhinweise
