@@ -284,11 +284,11 @@ Figure 5.1: Wenn angehakt, ist das Paket gestartet.
 </p>
 </div>
 <p><em>Alternativ</em> können Sie auch diesen Befehl eingeben:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="deskriptive-statistik.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;rstatix&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="deskriptive-statistik.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;rstatix&quot;</span>)</span></code></pre></div>
 <p>Zur Erinnerung: Sie müssen dieses Paket installiert haben, sonst können Sie
 es nicht starten.</p>
 <p>So, jetzt geht es rund:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="deskriptive-statistik.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_summary_stats</span>(mtcars)</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="deskriptive-statistik.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_summary_stats</span>(mtcars)</span></code></pre></div>
 <pre><code>## # A tibble: 11 × 13
 ##    variable     n   min    max median     q1     q3    iqr     mad    mean
 ##    &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
@@ -324,7 +324,7 @@ Figure 5.2: Hier werden Sie geholfen. Die R-Hilfe für jede R-Funktion.
 </div>
 <p>Nach einigem Lesen sehen wir bei <code>Arguments</code>: <code>type</code>.
 Probieren wir doch mal ein bisschen was aus:</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="deskriptive-statistik.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_summary_stats</span>(mtcars, <span class="at">type =</span> <span class="st">&quot;mean_sd&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="deskriptive-statistik.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_summary_stats</span>(mtcars, <span class="at">type =</span> <span class="st">&quot;mean_sd&quot;</span>)</span></code></pre></div>
 <pre><code>## # A tibble: 11 × 4
 ##    variable     n    mean      sd
 ##    &lt;chr&gt;    &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
@@ -352,7 +352,7 @@ nur noch 3 Statistiken angezeigt:</p>
 <p>Mit dem Befehl <code>freq_table(name_der_tabelle, name_der_spalte, name_der_spalte)</code>
 können wir uns Häufigkeiten (frequencies) in Tabellenform ausgeben lassen.
 Nett!</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="deskriptive-statistik.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">freq_table</span>(mtcars, am, cyl)</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="deskriptive-statistik.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">freq_table</span>(mtcars, am, cyl)</span></code></pre></div>
 <pre><code>## # A tibble: 6 × 4
 ##      am   cyl     n  prop
 ##   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt;
@@ -374,7 +374,7 @@ können wir so vorgehen:</p>
 <li>Berechne dann die deskriptiven Statistiken. Die Ergebnisse werden die Gruppierung berücksichtigen.</li>
 </ol>
 <p>Grau ist alle Theorie; probieren wir’s aus:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="deskriptive-statistik.html#cb24-1" aria-hidden="true" tabindex="-1"></a>mtcars <span class="ot">&lt;-</span> <span class="fu">group_by</span>(mtcars, am)  <span class="co"># wir gruppieren `mtcars` entlang der Variable `am`</span></span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="deskriptive-statistik.html#cb25-1" aria-hidden="true" tabindex="-1"></a>mtcars <span class="ot">&lt;-</span> <span class="fu">group_by</span>(mtcars, am)  <span class="co"># wir gruppieren `mtcars` entlang der Variable `am`</span></span></code></pre></div>
 <p>Okay, die Tabelle ist jetzt gruppiert.</p>
 <p>Jetzt kommt die normale Berechnung der deskriptiven Statistiken,
 also genau wie oben:</p>
@@ -388,7 +388,7 @@ Außerdem haben wir “robuste” Statistiken angefordert,
 was uns den Median (Lagemaß) und den IQR (Streuungsmaß) beschert hat.</p>
 <p>Möchten man den Datensatz wieder “ungruppieren”,
 so geht das auf plausiblem Wege:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="deskriptive-statistik.html#cb26-1" aria-hidden="true" tabindex="-1"></a>mtcars <span class="ot">&lt;-</span> <span class="fu">ungroup</span>(mtcars)</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="deskriptive-statistik.html#cb27-1" aria-hidden="true" tabindex="-1"></a>mtcars <span class="ot">&lt;-</span> <span class="fu">ungroup</span>(mtcars)</span></code></pre></div>
 <p>Und dann wieder Häufigkeiten,
 weil, warum nicht:</p>
 <pre><code>## # A tibble: 3 × 3

@@ -362,6 +362,8 @@ Paket <code>rio</code> importieren:</p>
 <h3><span class="header-section-number">4.3.2</span> Excel</h3>
 <p>Oder mit Excel-Daten (.xls und .xlsx):</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="daten-importieren.html#cb15-1" aria-hidden="true" tabindex="-1"></a>xlsx_path <span class="ot">&lt;-</span> <span class="st">&quot;https://github.com/sebastiansauer/Lehre/raw/main/data/excel-test.xlsx&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="daten-importieren.html#cb16-1" aria-hidden="true" tabindex="-1"></a>d2 <span class="ot">&lt;-</span> <span class="fu">import</span>(xlsx_path)</span>
+<span id="cb16-2"><a href="daten-importieren.html#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(d2)</span></code></pre></div>
 <pre><code>##   id var1         var2
 ## 1  1    4        hallo
 ## 2  2    5 hier spricht

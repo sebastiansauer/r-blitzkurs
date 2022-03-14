@@ -130,9 +130,14 @@ xlsx_path <- "https://github.com/sebastiansauer/Lehre/raw/main/data/excel-test.x
 ```
 
 
+```{r echo = TRUE}
+d2 <- import(xlsx_path)
+head(d2)
+```
 
 
-```{r}
+
+```{r echo = FALSE, eval = FALSE}
 download.file(xlsx_path, destfile = "test.xlsx")
 d2 <- rio::import("test.xlsx")
 head(d2)
