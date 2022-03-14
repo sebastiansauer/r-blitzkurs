@@ -65,9 +65,9 @@ Dabei ist `mpg` die AV (Zielvariable) und `am` die UV (Inputvariable), und `data
 
 
 
-Das Ergebnis sagt uns, dass es einen Unterschied von ca. 7,3 Meilen pro Gallone Sprit gibt (im Mittelwert) zwischen den Gruppen.
+Das Ergebnis sagt uns, dass es einen Unterschied von ca. 7,3 Meilen pro Gallone Sprit gibt (im Mittelwert) zwischen den Gruppen (behauptet zumindest unser Modell).
 
-Viellicht visualisieren wir uns das schnell mal:
+Vielleicht visualisieren wir uns das schnell mal:
 
 
 ```{r}
@@ -118,14 +118,21 @@ Auf dieser Basis können wir jetzt sagen:
 
 
 Wie man den p-Wert korrekt interpretiert, 
-das sparen wir uns hier. 
-Für die Praxis genügt es vielen (leider Gottes) zu sagen: $p<.05$, alles paletti!
+das sparen wir uns hier (versteht eh niemand). 
+Für die Praxis genügt es vielen (leider Gottes) zu sagen: 
+$p<.05$, alles paletti!
 
+
+Übrigens sind Sie mit dem Namen des Objekts vollkommen frei.
+Wenn Ihnen `lm1` nicht gefällt, dann können Sie auch z.B. als Namen wählen
+`mein_cooles_lineares_Modell`.
+
+    
 
 ## Visualisierung
 
 
-Nutzen wir zur Visualisierung unseres Regressionsmodells wieder das Paket `ggstatsplot`:
+Nutzen wir zur Visualisierung unseres Regressionsmodells `lm1` wieder das Paket `ggstatsplot`:
 
 
 ```{r}
@@ -141,13 +148,16 @@ wenn man das Diagramm gleich selber von Grund auf erstellen würde.
 ## Fazit
 
 
-Mit gleicher Manier, d.h. via `lm()` können wir (fast) beliebige Forschungsfragen auf ihre Signifikanz hin untersuchen.
+Mit gleicher Manier, d.h. via `lm()`, können wir (fast) beliebige 
+Forschungsfragen auf ihre Signifikanz hin untersuchen.
 
 
 ## Weiterführende Hinweise
 
 Grundlagen des Modellierens finden sich in @sauer_moderne_2019. 
 Eine nützliche und moderne Einführung, frei verfügbar, findet sich bei @cetinkaya-rundel_introduction_2021, [hier](https://openintro-ims.netlify.app/).
+Die Idee, die Regression als Schweizer Offiziersmesser der Datenanalyse zu nutzen,
+kann man [hier](https://lindeloev.github.io/tests-as-linear/) nachlesen.
 
 
 

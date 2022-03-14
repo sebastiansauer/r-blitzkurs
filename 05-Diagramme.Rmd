@@ -44,7 +44,7 @@ library("ggpubr")
 ## Daten importieren
 
 
-Falls Sie den Datensatz `mtcars` nicht geladen haben (er als *nicht* im Reiter *Environment auftaucht),
+Falls Sie den Datensatz `mtcars` nicht geladen haben (er als *nicht* im Reiter *Environment* auftaucht),
 dann laden Sie den Datensatz noch schnell.^[Streng genommen, ist dieser Schritt *nicht* nötig, da `mtcars` mit R mitgeliefert wird. Der Übung und der Transparenz halber macht dieser Schritt aber Sinn.]
 
 Sie können einfach die folgende Syntax copy-pasten:
@@ -162,14 +162,14 @@ Weitere Hinweise zum Gruppenvergleich finden sich [hier](https://indrajeetpatil.
 ggscatterstats(mtcars, x = hp, y = mpg)
 ```
 
-Wenn Sie folgende Fehlermeldung bekommen:
+*Wenn* Sie folgende Fehlermeldung bekommen:
 
 `
 Error: Package 'ggside' is required for this function to work.
 Please install it by running install.packages('ggside').
 `
 
-Dann sollten Sie das angefragte Paket, `ggside`, noch installieren auf üblichem Weg.
+Dann sollten Sie das angefragte Paket, `ggside`, noch installieren auf üblichem Weg (ansonsten tut es nicht Not).
 
 
 
