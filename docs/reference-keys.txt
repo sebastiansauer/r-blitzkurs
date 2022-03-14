@@ -66,6 +66,7 @@ csv-dateien-von-innen
 spss--und-excel-dateien-importieren-mit-rio
 spss
 excel
+export
 literaturhinweise-1
 deskriptive-statistik
 metrische-variablen

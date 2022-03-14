@@ -145,7 +145,7 @@ library("ggstatsplot")
 
 
 
-```{r}
+```{r fig.width=7}
 ggbetweenstats(mtcars, x = am, y = mpg)
 ```
 
@@ -158,7 +158,7 @@ Weitere Hinweise zum Gruppenvergleich finden sich [hier](https://indrajeetpatil.
 ### Streudiagramme
 
 
-```{r}
+```{r fig.width=7}
 ggscatterstats(mtcars, x = hp, y = mpg)
 ```
 

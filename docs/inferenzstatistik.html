@@ -216,7 +216,8 @@ div.csl-indent {
 <li class="chapter" data-level="4.3.1" data-path="daten-importieren.html"><a href="daten-importieren.html#spss"><i class="fa fa-check"></i><b>4.3.1</b> SPSS</a></li>
 <li class="chapter" data-level="4.3.2" data-path="daten-importieren.html"><a href="daten-importieren.html#excel"><i class="fa fa-check"></i><b>4.3.2</b> Excel</a></li>
 </ul></li>
-<li class="chapter" data-level="4.4" data-path="daten-importieren.html"><a href="daten-importieren.html#literaturhinweise-1"><i class="fa fa-check"></i><b>4.4</b> Literaturhinweise</a></li>
+<li class="chapter" data-level="4.4" data-path="daten-importieren.html"><a href="daten-importieren.html#export"><i class="fa fa-check"></i><b>4.4</b> Export</a></li>
+<li class="chapter" data-level="4.5" data-path="daten-importieren.html"><a href="daten-importieren.html#literaturhinweise-1"><i class="fa fa-check"></i><b>4.5</b> Literaturhinweise</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="deskriptive-statistik.html"><a href="deskriptive-statistik.html"><i class="fa fa-check"></i><b>5</b> Deskriptive Statistik</a>
 <ul>
@@ -313,7 +314,7 @@ das rechnerisch exakt gleiche Ergebnis<a href="literatur.html#fn3" class="footno
 <span id="cb47-3"><a href="inferenzstatistik.html#cb47-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">conf.int =</span> <span class="cn">TRUE</span>,</span>
 <span id="cb47-4"><a href="inferenzstatistik.html#cb47-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">mean.point =</span> <span class="cn">TRUE</span>,</span>
 <span id="cb47-5"><a href="inferenzstatistik.html#cb47-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">cor.coef =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
-<p><img src="chunk-img/unnamed-chunk-39-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="chunk-img/unnamed-chunk-40-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <p>Die Linie im Diagramm ist die Regressionslinie. Der graue Schleier das 95%-Konfidenzintervall.</p>
 <p>Und: wir haben schon einen p-Wert, und zwar für die Korrelation (R) der beiden Größen.
 Das ist aber nicht der p-Wert für den Gruppenunterschied.
@@ -365,7 +366,7 @@ Für die Praxis genügt es vielen (leider Gottes) zu sagen: <span class="math in
 <h2><span class="header-section-number">7.4</span> Visualisierung</h2>
 <p>Nutzen wir zur Visualisierung unseres Regressionsmodells wieder das Paket <code>ggstatsplot</code>:</p>
 <div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="inferenzstatistik.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggcoefstats</span>(lm1)</span></code></pre></div>
-<p><img src="chunk-img/unnamed-chunk-41-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="chunk-img/unnamed-chunk-42-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <p>Es gibt einen <a href="https://indrajeetpatil.github.io/ggstatsplot/reference/ggcoefstats.html">Haufen Konfigurationsmöglichkeiten für diese Funktion</a>.
 Aber natürlich ist man flexibler,
 wenn man das Diagramm gleich selber von Grund auf erstellen würde.</p>
