@@ -119,27 +119,36 @@ also genau wie oben:
 
 
 
-```{r}
+```{r echo = TRUE}
 get_summary_stats(mtcars, mpg, type = "robust")
 ```
 
-Hier haben wir die deskriptive Analyse auf eine Spalte begrenzt, nämglich `mpg` (Spritverbrauch).
+Hier haben wir die deskriptive Analyse auf eine Spalte begrenzt, 
+nämlich `mpg` (Spritverbrauch).
 Außerdem haben wir "robuste" Statistiken angefordert,
 was uns den Median (Lagemaß) und den IQR (Streuungsmaß) beschert hat.
 
 
-Möchten man den Datensatz wieder "ungruppieren",
+Möchten man den Datensatz wieder "ungruppieren" (die Gruppierung auflösen/löschen),
 so geht das auf plausiblem Wege:
 
 ```{r echo = TRUE}
 mtcars <- ungroup(mtcars)
 ```
 
+So sieht dann das *un*gruppierte Ergebnis aus,
+nicht so spannend:
+
+```{r echo = TRUE}
+get_summary_stats(mtcars, mpg, type = "robust")
+```
+
+
 
 Und dann wieder Häufigkeiten,
 weil, warum nicht:
 
-```{r}
+```{r echo = TRUE}
 freq_table(mtcars, cyl)
 ```
 

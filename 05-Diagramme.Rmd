@@ -41,6 +41,34 @@ library("ggpubr")
 ```
 
 
+## Daten importieren
+
+
+Falls Sie den Datensat `mtcars` nicht geladen haben (er als *nicht* im Reiter *Environment auftaucht),
+dann laden Sie den Datensatz noch schnell.
+
+Sie können einfach die folgende Syntax copy-pasten:
+
+
+```{r echo = TRUE}
+library(rio)  # R-Paket "R Import, Expoert" (rio)
+
+mtcars_path <- "https://vincentarelbundock.github.io/Rdatasets/csv/datasets/mtcars.csv"
+
+mtcars <- import(mtcars_path)
+```
+
+Oder Sie schauen im Kapitel [import] noch einmal nach.
+
+
+Wenn es funktioniert hat, 
+dann sollte `mtcars` unter *Data* im Reiter *Environment* auftauchen.
+
+```{r}
+knitr::include_graphics()
+```
+
+
 
 ## Zwei Gruppen vergleichen
 
