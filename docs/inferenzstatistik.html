@@ -228,15 +228,16 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="6" data-path="diagramme.html"><a href="diagramme.html"><i class="fa fa-check"></i><b>6</b> Diagramme</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="diagramme.html"><a href="diagramme.html#zwei-gruppen-vergleichen"><i class="fa fa-check"></i><b>6.1</b> Zwei Gruppen vergleichen</a></li>
-<li class="chapter" data-level="6.2" data-path="diagramme.html"><a href="diagramme.html#streudiagramm"><i class="fa fa-check"></i><b>6.2</b> Streudiagramm</a></li>
-<li class="chapter" data-level="6.3" data-path="diagramme.html"><a href="diagramme.html#convenience-fooddiagramme"><i class="fa fa-check"></i><b>6.3</b> Convenience <del>Food</del>Diagramme</a>
+<li class="chapter" data-level="6.1" data-path="diagramme.html"><a href="diagramme.html#daten-importieren-1"><i class="fa fa-check"></i><b>6.1</b> Daten importieren</a></li>
+<li class="chapter" data-level="6.2" data-path="diagramme.html"><a href="diagramme.html#zwei-gruppen-vergleichen"><i class="fa fa-check"></i><b>6.2</b> Zwei Gruppen vergleichen</a></li>
+<li class="chapter" data-level="6.3" data-path="diagramme.html"><a href="diagramme.html#streudiagramm"><i class="fa fa-check"></i><b>6.3</b> Streudiagramm</a></li>
+<li class="chapter" data-level="6.4" data-path="diagramme.html"><a href="diagramme.html#convenience-fooddiagramme"><i class="fa fa-check"></i><b>6.4</b> Convenience <del>Food</del>Diagramme</a>
 <ul>
-<li class="chapter" data-level="6.3.1" data-path="diagramme.html"><a href="diagramme.html#gruppenvergleich"><i class="fa fa-check"></i><b>6.3.1</b> Gruppenvergleich</a></li>
-<li class="chapter" data-level="6.3.2" data-path="diagramme.html"><a href="diagramme.html#streudiagramme"><i class="fa fa-check"></i><b>6.3.2</b> Streudiagramme</a></li>
+<li class="chapter" data-level="6.4.1" data-path="diagramme.html"><a href="diagramme.html#gruppenvergleich"><i class="fa fa-check"></i><b>6.4.1</b> Gruppenvergleich</a></li>
+<li class="chapter" data-level="6.4.2" data-path="diagramme.html"><a href="diagramme.html#streudiagramme"><i class="fa fa-check"></i><b>6.4.2</b> Streudiagramme</a></li>
 </ul></li>
-<li class="chapter" data-level="6.4" data-path="diagramme.html"><a href="diagramme.html#fazit"><i class="fa fa-check"></i><b>6.4</b> Fazit</a></li>
-<li class="chapter" data-level="6.5" data-path="diagramme.html"><a href="diagramme.html#literaturhinweise-3"><i class="fa fa-check"></i><b>6.5</b> Literaturhinweise</a></li>
+<li class="chapter" data-level="6.5" data-path="diagramme.html"><a href="diagramme.html#fazit"><i class="fa fa-check"></i><b>6.5</b> Fazit</a></li>
+<li class="chapter" data-level="6.6" data-path="diagramme.html"><a href="diagramme.html#literaturhinweise-3"><i class="fa fa-check"></i><b>6.6</b> Literaturhinweise</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="inferenzstatistik.html"><a href="inferenzstatistik.html"><i class="fa fa-check"></i><b>7</b> Inferenzstatistik</a>
 <ul>
@@ -293,10 +294,10 @@ Das sind alles Spezialfälle der Regressionsanalyse.</p>
 <h2><span class="header-section-number">7.2</span> Unterschied im Spritverbrauch zwischen den Getriebarten</h2>
 <p>Forschungsfrage: <em>Unterscheiden sich die Mittelwerte des Spritverbrauchs der beiden Gruppen von Getriebart (manuelle Schaltung vs. Automatik-Schaltung)?</em></p>
 <p>Das könnte man mit einem t-Test rechnen, aber die Regressionsanalyse bringt
-das rechnerisch exakt gleiche Ergebnis<a href="literatur.html#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+das rechnerisch exakt gleiche Ergebnis<a href="literatur.html#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
 <p>In R heißt der Befehl für eine Regressionsanalyse <code>lm()</code> (wie lineares Modell).</p>
 <p>In unserem Fall:</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="inferenzstatistik.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(mpg <span class="sc">~</span> am, <span class="at">data =</span> mtcars)  <span class="co"># AV ~ UV</span></span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="inferenzstatistik.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(mpg <span class="sc">~</span> am, <span class="at">data =</span> mtcars)  <span class="co"># AV ~ UV</span></span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = mpg ~ am, data = mtcars)
@@ -307,12 +308,12 @@ das rechnerisch exakt gleiche Ergebnis<a href="literatur.html#fn2" class="footno
 <p>Dabei ist <code>mpg</code> die AV (Zielvariable) und <code>am</code> die UV (Inputvariable), und <code>data</code> spezifiziert den Namen der Datentabelle.</p>
 <p>Das Ergebnis sagt uns, dass es einen Unterschied von ca. 7,3 Meilen pro Gallone Sprit gibt (im Mittelwert) zwischen den Gruppen.</p>
 <p>Viellicht visualisieren wir uns das schnell mal:</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="inferenzstatistik.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggscatter</span>(mtcars, <span class="at">x =</span> <span class="st">&quot;am&quot;</span>, <span class="at">y =</span> <span class="st">&quot;mpg&quot;</span>,</span>
-<span id="cb42-2"><a href="inferenzstatistik.html#cb42-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">add =</span> <span class="st">&quot;reg.line&quot;</span>,</span>
-<span id="cb42-3"><a href="inferenzstatistik.html#cb42-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">conf.int =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb42-4"><a href="inferenzstatistik.html#cb42-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">mean.point =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb42-5"><a href="inferenzstatistik.html#cb42-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">cor.coef =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
-<p><img src="chunk-img/unnamed-chunk-37-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="inferenzstatistik.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggscatter</span>(mtcars, <span class="at">x =</span> <span class="st">&quot;am&quot;</span>, <span class="at">y =</span> <span class="st">&quot;mpg&quot;</span>,</span>
+<span id="cb47-2"><a href="inferenzstatistik.html#cb47-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">add =</span> <span class="st">&quot;reg.line&quot;</span>,</span>
+<span id="cb47-3"><a href="inferenzstatistik.html#cb47-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">conf.int =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb47-4"><a href="inferenzstatistik.html#cb47-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">mean.point =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb47-5"><a href="inferenzstatistik.html#cb47-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">cor.coef =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<p><img src="chunk-img/unnamed-chunk-39-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <p>Die Linie im Diagramm ist die Regressionslinie. Der graue Schleier das 95%-Konfidenzintervall.</p>
 <p>Und: wir haben schon einen p-Wert, und zwar für die Korrelation (R) der beiden Größen.
 Das ist aber nicht der p-Wert für den Gruppenunterschied.
@@ -326,8 +327,8 @@ Oh, hab ich das gerade gesagt? Naja, so machen es jedenfalls die meisten.</p>
 Ohne p-Wert, habe ich schmerzlich gelernt, kann man nicht publizieren,
 aber mit einem schönen p-Wert, da stünde die Welt offen, hab ich gehört.</p>
 <p>Also gut, holen wir uns den p-Wert für den Gruppenunterschied. Dafür müssen wir Folgendes tun:</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="inferenzstatistik.html#cb43-1" aria-hidden="true" tabindex="-1"></a>lm1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(mpg <span class="sc">~</span> am, <span class="at">data =</span> mtcars)</span>
-<span id="cb43-2"><a href="inferenzstatistik.html#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm1)</span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="inferenzstatistik.html#cb48-1" aria-hidden="true" tabindex="-1"></a>lm1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(mpg <span class="sc">~</span> am, <span class="at">data =</span> mtcars)</span>
+<span id="cb48-2"><a href="inferenzstatistik.html#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm1)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = mpg ~ am, data = mtcars)
@@ -363,8 +364,8 @@ Für die Praxis genügt es vielen (leider Gottes) zu sagen: <span class="math in
 <div id="visualisierung" class="section level2" number="7.4">
 <h2><span class="header-section-number">7.4</span> Visualisierung</h2>
 <p>Nutzen wir zur Visualisierung unseres Regressionsmodells wieder das Paket <code>ggstatsplot</code>:</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="inferenzstatistik.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggcoefstats</span>(lm1)</span></code></pre></div>
-<p><img src="chunk-img/unnamed-chunk-39-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="inferenzstatistik.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggcoefstats</span>(lm1)</span></code></pre></div>
+<p><img src="chunk-img/unnamed-chunk-41-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <p>Es gibt einen <a href="https://indrajeetpatil.github.io/ggstatsplot/reference/ggcoefstats.html">Haufen Konfigurationsmöglichkeiten für diese Funktion</a>.
 Aber natürlich ist man flexibler,
 wenn man das Diagramm gleich selber von Grund auf erstellen würde.</p>

@@ -228,15 +228,16 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="6" data-path="diagramme.html"><a href="diagramme.html"><i class="fa fa-check"></i><b>6</b> Diagramme</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="diagramme.html"><a href="diagramme.html#zwei-gruppen-vergleichen"><i class="fa fa-check"></i><b>6.1</b> Zwei Gruppen vergleichen</a></li>
-<li class="chapter" data-level="6.2" data-path="diagramme.html"><a href="diagramme.html#streudiagramm"><i class="fa fa-check"></i><b>6.2</b> Streudiagramm</a></li>
-<li class="chapter" data-level="6.3" data-path="diagramme.html"><a href="diagramme.html#convenience-fooddiagramme"><i class="fa fa-check"></i><b>6.3</b> Convenience <del>Food</del>Diagramme</a>
+<li class="chapter" data-level="6.1" data-path="diagramme.html"><a href="diagramme.html#daten-importieren-1"><i class="fa fa-check"></i><b>6.1</b> Daten importieren</a></li>
+<li class="chapter" data-level="6.2" data-path="diagramme.html"><a href="diagramme.html#zwei-gruppen-vergleichen"><i class="fa fa-check"></i><b>6.2</b> Zwei Gruppen vergleichen</a></li>
+<li class="chapter" data-level="6.3" data-path="diagramme.html"><a href="diagramme.html#streudiagramm"><i class="fa fa-check"></i><b>6.3</b> Streudiagramm</a></li>
+<li class="chapter" data-level="6.4" data-path="diagramme.html"><a href="diagramme.html#convenience-fooddiagramme"><i class="fa fa-check"></i><b>6.4</b> Convenience <del>Food</del>Diagramme</a>
 <ul>
-<li class="chapter" data-level="6.3.1" data-path="diagramme.html"><a href="diagramme.html#gruppenvergleich"><i class="fa fa-check"></i><b>6.3.1</b> Gruppenvergleich</a></li>
-<li class="chapter" data-level="6.3.2" data-path="diagramme.html"><a href="diagramme.html#streudiagramme"><i class="fa fa-check"></i><b>6.3.2</b> Streudiagramme</a></li>
+<li class="chapter" data-level="6.4.1" data-path="diagramme.html"><a href="diagramme.html#gruppenvergleich"><i class="fa fa-check"></i><b>6.4.1</b> Gruppenvergleich</a></li>
+<li class="chapter" data-level="6.4.2" data-path="diagramme.html"><a href="diagramme.html#streudiagramme"><i class="fa fa-check"></i><b>6.4.2</b> Streudiagramme</a></li>
 </ul></li>
-<li class="chapter" data-level="6.4" data-path="diagramme.html"><a href="diagramme.html#fazit"><i class="fa fa-check"></i><b>6.4</b> Fazit</a></li>
-<li class="chapter" data-level="6.5" data-path="diagramme.html"><a href="diagramme.html#literaturhinweise-3"><i class="fa fa-check"></i><b>6.5</b> Literaturhinweise</a></li>
+<li class="chapter" data-level="6.5" data-path="diagramme.html"><a href="diagramme.html#fazit"><i class="fa fa-check"></i><b>6.5</b> Fazit</a></li>
+<li class="chapter" data-level="6.6" data-path="diagramme.html"><a href="diagramme.html#literaturhinweise-3"><i class="fa fa-check"></i><b>6.6</b> Literaturhinweise</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="inferenzstatistik.html"><a href="inferenzstatistik.html"><i class="fa fa-check"></i><b>7</b> Inferenzstatistik</a>
 <ul>
@@ -378,19 +379,29 @@ können wir so vorgehen:</p>
 <p>Okay, die Tabelle ist jetzt gruppiert.</p>
 <p>Jetzt kommt die normale Berechnung der deskriptiven Statistiken,
 also genau wie oben:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="deskriptive-statistik.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_summary_stats</span>(mtcars, mpg, <span class="at">type =</span> <span class="st">&quot;robust&quot;</span>)</span></code></pre></div>
 <pre><code>## # A tibble: 2 × 5
 ##      am variable     n median   iqr
 ##   &lt;dbl&gt; &lt;chr&gt;    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
 ## 1     0 mpg         19   17.3  4.25
 ## 2     1 mpg         13   22.8  9.4</code></pre>
-<p>Hier haben wir die deskriptive Analyse auf eine Spalte begrenzt, nämglich <code>mpg</code> (Spritverbrauch).
+<p>Hier haben wir die deskriptive Analyse auf eine Spalte begrenzt,
+nämlich <code>mpg</code> (Spritverbrauch).
 Außerdem haben wir “robuste” Statistiken angefordert,
 was uns den Median (Lagemaß) und den IQR (Streuungsmaß) beschert hat.</p>
-<p>Möchten man den Datensatz wieder “ungruppieren”,
+<p>Möchten man den Datensatz wieder “ungruppieren” (die Gruppierung auflösen/löschen),
 so geht das auf plausiblem Wege:</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="deskriptive-statistik.html#cb27-1" aria-hidden="true" tabindex="-1"></a>mtcars <span class="ot">&lt;-</span> <span class="fu">ungroup</span>(mtcars)</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="deskriptive-statistik.html#cb28-1" aria-hidden="true" tabindex="-1"></a>mtcars <span class="ot">&lt;-</span> <span class="fu">ungroup</span>(mtcars)</span></code></pre></div>
+<p>So sieht dann das <em>un</em>gruppierte Ergebnis aus,
+nicht so spannend:</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="deskriptive-statistik.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_summary_stats</span>(mtcars, mpg, <span class="at">type =</span> <span class="st">&quot;robust&quot;</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 1 × 4
+##   variable     n median   iqr
+##   &lt;chr&gt;    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+## 1 mpg         32   19.2  7.38</code></pre>
 <p>Und dann wieder Häufigkeiten,
 weil, warum nicht:</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="deskriptive-statistik.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">freq_table</span>(mtcars, cyl)</span></code></pre></div>
 <pre><code>## # A tibble: 3 × 3
 ##     cyl     n  prop
 ##   &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt;

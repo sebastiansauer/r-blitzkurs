@@ -18,6 +18,7 @@ fig:environment
 fig:mtcars-head
 fig:start-package
 fig:help
+fig:mtcars-loaded
 überblick
 tldr
 was-sie-hier-lernen-und-wozu-das-gut-ist
@@ -73,6 +74,7 @@ subgruppenanalyse
 vertiefung-datenjudo-dplyr
 literaturhinweise-2
 diagramme
+daten-importieren-1
 zwei-gruppen-vergleichen
 streudiagramm
 convenience-fooddiagramme

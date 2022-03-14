@@ -1,6 +1,6 @@
 
 
-# Daten importieren {import}
+# Daten importieren
 
 
 ## CSV-Dateien importieren

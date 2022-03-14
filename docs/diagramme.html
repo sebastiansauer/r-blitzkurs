@@ -228,15 +228,16 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="6" data-path="diagramme.html"><a href="diagramme.html"><i class="fa fa-check"></i><b>6</b> Diagramme</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="diagramme.html"><a href="diagramme.html#zwei-gruppen-vergleichen"><i class="fa fa-check"></i><b>6.1</b> Zwei Gruppen vergleichen</a></li>
-<li class="chapter" data-level="6.2" data-path="diagramme.html"><a href="diagramme.html#streudiagramm"><i class="fa fa-check"></i><b>6.2</b> Streudiagramm</a></li>
-<li class="chapter" data-level="6.3" data-path="diagramme.html"><a href="diagramme.html#convenience-fooddiagramme"><i class="fa fa-check"></i><b>6.3</b> Convenience <del>Food</del>Diagramme</a>
+<li class="chapter" data-level="6.1" data-path="diagramme.html"><a href="diagramme.html#daten-importieren-1"><i class="fa fa-check"></i><b>6.1</b> Daten importieren</a></li>
+<li class="chapter" data-level="6.2" data-path="diagramme.html"><a href="diagramme.html#zwei-gruppen-vergleichen"><i class="fa fa-check"></i><b>6.2</b> Zwei Gruppen vergleichen</a></li>
+<li class="chapter" data-level="6.3" data-path="diagramme.html"><a href="diagramme.html#streudiagramm"><i class="fa fa-check"></i><b>6.3</b> Streudiagramm</a></li>
+<li class="chapter" data-level="6.4" data-path="diagramme.html"><a href="diagramme.html#convenience-fooddiagramme"><i class="fa fa-check"></i><b>6.4</b> Convenience <del>Food</del>Diagramme</a>
 <ul>
-<li class="chapter" data-level="6.3.1" data-path="diagramme.html"><a href="diagramme.html#gruppenvergleich"><i class="fa fa-check"></i><b>6.3.1</b> Gruppenvergleich</a></li>
-<li class="chapter" data-level="6.3.2" data-path="diagramme.html"><a href="diagramme.html#streudiagramme"><i class="fa fa-check"></i><b>6.3.2</b> Streudiagramme</a></li>
+<li class="chapter" data-level="6.4.1" data-path="diagramme.html"><a href="diagramme.html#gruppenvergleich"><i class="fa fa-check"></i><b>6.4.1</b> Gruppenvergleich</a></li>
+<li class="chapter" data-level="6.4.2" data-path="diagramme.html"><a href="diagramme.html#streudiagramme"><i class="fa fa-check"></i><b>6.4.2</b> Streudiagramme</a></li>
 </ul></li>
-<li class="chapter" data-level="6.4" data-path="diagramme.html"><a href="diagramme.html#fazit"><i class="fa fa-check"></i><b>6.4</b> Fazit</a></li>
-<li class="chapter" data-level="6.5" data-path="diagramme.html"><a href="diagramme.html#literaturhinweise-3"><i class="fa fa-check"></i><b>6.5</b> Literaturhinweise</a></li>
+<li class="chapter" data-level="6.5" data-path="diagramme.html"><a href="diagramme.html#fazit"><i class="fa fa-check"></i><b>6.5</b> Fazit</a></li>
+<li class="chapter" data-level="6.6" data-path="diagramme.html"><a href="diagramme.html#literaturhinweise-3"><i class="fa fa-check"></i><b>6.6</b> Literaturhinweise</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="inferenzstatistik.html"><a href="inferenzstatistik.html"><i class="fa fa-check"></i><b>7</b> Inferenzstatistik</a>
 <ul>
@@ -284,75 +285,97 @@ Sieht nicht schlecht aus, oder?</p>
 Oder sie verwenden den folgenden Befehl,
 ist vielleicht komfortabler für Sie,
 Sie brauchen dann nur Copy-Pasten:</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="diagramme.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;ggpubr&quot;</span>)  <span class="co"># nur einmal</span></span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="diagramme.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;ggpubr&quot;</span>)  <span class="co"># nur einmal</span></span></code></pre></div>
 <p>Dann starten wir das Paket durch Anhaken
 oder wiederum mit einem Befehl:</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="diagramme.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggpubr&quot;</span>)</span></code></pre></div>
-<div id="zwei-gruppen-vergleichen" class="section level2" number="6.1">
-<h2><span class="header-section-number">6.1</span> Zwei Gruppen vergleichen</h2>
-<p>Ein Klassiker: Zwei Gruppen vergleichen hinsichtlich ihres Mitelwerts oder Medians. Fangen wir mal damit an.</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="diagramme.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggboxplot</span>(mtcars, <span class="at">x =</span> <span class="st">&quot;am&quot;</span>, <span class="at">y =</span> <span class="st">&quot;mpg&quot;</span>)</span></code></pre></div>
-<p><img src="chunk-img/unnamed-chunk-27-1.png" width="100%" style="display: block; margin: auto;" /></p>
-<p>Merke: Die Argumente der Funktionen bei <code>ggppubr</code> sind:</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="diagramme.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggpubr&quot;</span>)</span></code></pre></div>
+<div id="daten-importieren-1" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Daten importieren</h2>
+<p>Falls Sie den Datensatz <code>mtcars</code> nicht geladen haben (er als <em>nicht</em> im Reiter *Environment auftaucht),
+dann laden Sie den Datensatz noch schnell.<a href="literatur.html#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+<p>Sie können einfach die folgende Syntax copy-pasten:</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="diagramme.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rio)  <span class="co"># R-Paket &quot;R Import, Expoert&quot; (rio)</span></span>
+<span id="cb35-2"><a href="diagramme.html#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="diagramme.html#cb35-3" aria-hidden="true" tabindex="-1"></a>mtcars_path <span class="ot">&lt;-</span> <span class="st">&quot;https://vincentarelbundock.github.io/Rdatasets/csv/datasets/mtcars.csv&quot;</span></span>
+<span id="cb35-4"><a href="diagramme.html#cb35-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-5"><a href="diagramme.html#cb35-5" aria-hidden="true" tabindex="-1"></a>mtcars <span class="ot">&lt;-</span> <span class="fu">import</span>(mtcars_path)</span></code></pre></div>
+<p>Oder Sie lesen im Kapitel <a href="daten-importieren.html#daten-importieren">Daten importieren</a> noch einmal nach.</p>
+<p>Wenn es funktioniert hat,
+dann sollte <code>mtcars</code> unter <em>Data</em> im Reiter <em>Environment</em> auftauchen,
+s. Abb. <a href="diagramme.html#fig:mtcars-loaded">6.1</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mtcars-loaded"></span>
+<img src="img/mtcars-loaded.png" alt="So sieht's aus, wenn mtcars verfügbar ist auf Ihrem Computer" width="50%" />
+<p class="caption">
+Figure 6.1: So sieht’s aus, wenn mtcars verfügbar ist auf Ihrem Computer
+</p>
+</div>
+</div>
+<div id="zwei-gruppen-vergleichen" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Zwei Gruppen vergleichen</h2>
+<p>Ein Klassiker: Zwei Gruppen vergleichen hinsichtlich ihres Mitelwerts oder Medians.
+Fangen wir mal damit an:</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="diagramme.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggboxplot</span>(mtcars, <span class="at">x =</span> <span class="st">&quot;am&quot;</span>, <span class="at">y =</span> <span class="st">&quot;mpg&quot;</span>)</span></code></pre></div>
+<p><img src="chunk-img/unnamed-chunk-29-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>Merke: Die Argumente der Funktionen bei den Diagramm-Befehlen im R-Paket <code>ggppubr</code> sind:</p>
 <ol style="list-style-type: decimal">
 <li>Name der Tabelle</li>
 <li>x: Variable auf der X-Achse</li>
 <li>y: Variable auf der Y-Achse</li>
 <li>sonstiges</li>
 </ol>
-<p>Als nächstes, sehr ähnliches Diagramm, ein Violinenplot.
+<p>Als nächstes, sehr ähnliches Diagramm, probieren wir ein Violinenplot.
 Aber wir ergänzen noch den Mittelwert pro Gruppe (und dieses Mal mit der Anzahl der Zylinder auf der X-Achse):</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="diagramme.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggviolin</span>(mtcars, <span class="at">x =</span> <span class="st">&quot;cyl&quot;</span>, <span class="at">y =</span> <span class="st">&quot;mpg&quot;</span>, <span class="at">add =</span> <span class="st">&quot;mean&quot;</span>)</span></code></pre></div>
-<p><img src="chunk-img/unnamed-chunk-28-1.png" width="100%" style="display: block; margin: auto;" /></p>
-</div>
-<div id="streudiagramm" class="section level2" number="6.2">
-<h2><span class="header-section-number">6.2</span> Streudiagramm</h2>
-<p>Gibt es wohl einen Zusammenhang von Spritverbrauch <code>mpg</code> und PS (<code>hp</code>)?</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="diagramme.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggscatter</span>(mtcars, <span class="at">x =</span> <span class="st">&quot;hp&quot;</span>, <span class="at">y =</span> <span class="st">&quot;mpg&quot;</span>)</span></code></pre></div>
-<p><img src="chunk-img/unnamed-chunk-29-1.png" width="100%" style="display: block; margin: auto;" /></p>
-<p>Pimp my Diagram:</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="diagramme.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggscatter</span>(mtcars, </span>
-<span id="cb34-2"><a href="diagramme.html#cb34-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">x =</span> <span class="st">&quot;hp&quot;</span>, <span class="at">y =</span> <span class="st">&quot;mpg&quot;</span>, </span>
-<span id="cb34-3"><a href="diagramme.html#cb34-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">color =</span> <span class="st">&quot;indianred&quot;</span>,</span>
-<span id="cb34-4"><a href="diagramme.html#cb34-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">add =</span> <span class="st">&quot;reg.line&quot;</span>,  <span class="co"># linearer Trend (Regression)</span></span>
-<span id="cb34-5"><a href="diagramme.html#cb34-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">title =</span> <span class="st">&quot;Der Zusammenhang von PS und Spritverbrauch&quot;</span>,</span>
-<span id="cb34-6"><a href="diagramme.html#cb34-6" aria-hidden="true" tabindex="-1"></a>          <span class="at">mean.point =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="diagramme.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggviolin</span>(mtcars, <span class="at">x =</span> <span class="st">&quot;cyl&quot;</span>, <span class="at">y =</span> <span class="st">&quot;mpg&quot;</span>, <span class="at">add =</span> <span class="st">&quot;mean&quot;</span>)</span></code></pre></div>
 <p><img src="chunk-img/unnamed-chunk-30-1.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="convenience-fooddiagramme" class="section level2" number="6.3">
-<h2><span class="header-section-number">6.3</span> Convenience <del>Food</del>Diagramme</h2>
+<div id="streudiagramm" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> Streudiagramm</h2>
+<p>Gibt es wohl einen Zusammenhang von Spritverbrauch <code>mpg</code> und PS (<code>hp</code>)?</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="diagramme.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggscatter</span>(mtcars, <span class="at">x =</span> <span class="st">&quot;hp&quot;</span>, <span class="at">y =</span> <span class="st">&quot;mpg&quot;</span>)</span></code></pre></div>
+<p><img src="chunk-img/unnamed-chunk-31-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>Pimp my Diagram:</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="diagramme.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggscatter</span>(mtcars, </span>
+<span id="cb39-2"><a href="diagramme.html#cb39-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">x =</span> <span class="st">&quot;hp&quot;</span>, <span class="at">y =</span> <span class="st">&quot;mpg&quot;</span>, </span>
+<span id="cb39-3"><a href="diagramme.html#cb39-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">color =</span> <span class="st">&quot;indianred&quot;</span>,</span>
+<span id="cb39-4"><a href="diagramme.html#cb39-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">add =</span> <span class="st">&quot;reg.line&quot;</span>,  <span class="co"># linearer Trend (Regression)</span></span>
+<span id="cb39-5"><a href="diagramme.html#cb39-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">title =</span> <span class="st">&quot;Der Zusammenhang von PS und Spritverbrauch&quot;</span>,</span>
+<span id="cb39-6"><a href="diagramme.html#cb39-6" aria-hidden="true" tabindex="-1"></a>          <span class="at">mean.point =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<p><img src="chunk-img/unnamed-chunk-32-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="convenience-fooddiagramme" class="section level2" number="6.4">
+<h2><span class="header-section-number">6.4</span> Convenience <del>Food</del>Diagramme</h2>
 <p>Mit dem R-Paket <a href="https://indrajeetpatil.github.io/ggstatsplot/index.html">ggstatsplot</a>
 kann man auf komfortable Art publikationsreife Diagramme erzeugen.</p>
 <p>Installieren wir zuerst das Paket:</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="diagramme.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;ggstatsplot&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="diagramme.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;ggstatsplot&quot;</span>)</span></code></pre></div>
 <p>Und dann starten wir es:</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="diagramme.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggstatsplot&quot;</span>)</span></code></pre></div>
-<div id="gruppenvergleich" class="section level3" number="6.3.1">
-<h3><span class="header-section-number">6.3.1</span> Gruppenvergleich</h3>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="diagramme.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggbetweenstats</span>(mtcars,<span class="at">x =</span> am, <span class="at">y =</span> mpg)</span></code></pre></div>
-<p><img src="chunk-img/unnamed-chunk-33-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="diagramme.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggstatsplot&quot;</span>)</span></code></pre></div>
+<div id="gruppenvergleich" class="section level3" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> Gruppenvergleich</h3>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="diagramme.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggbetweenstats</span>(mtcars,<span class="at">x =</span> am, <span class="at">y =</span> mpg)</span></code></pre></div>
+<p><img src="chunk-img/unnamed-chunk-35-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <p>Weitere Hinweise zum Gruppenvergleich finden sich <a href="https://indrajeetpatil.github.io/ggstatsplot/articles/web_only/ggbetweenstats.html">hier</a>.</p>
 </div>
-<div id="streudiagramme" class="section level3" number="6.3.2">
-<h3><span class="header-section-number">6.3.2</span> Streudiagramme</h3>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="diagramme.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggscatterstats</span>(mtcars, <span class="at">x =</span> hp, <span class="at">y =</span> mpg)</span></code></pre></div>
-<p><img src="chunk-img/unnamed-chunk-34-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<div id="streudiagramme" class="section level3" number="6.4.2">
+<h3><span class="header-section-number">6.4.2</span> Streudiagramme</h3>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="diagramme.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggscatterstats</span>(mtcars, <span class="at">x =</span> hp, <span class="at">y =</span> mpg)</span></code></pre></div>
+<p><img src="chunk-img/unnamed-chunk-36-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <p>Wenn Sie folgende Fehlermeldung bekommen:</p>
 <p><code>Error: Package 'ggside' is required for this function to work. Please install it by running install.packages('ggside').</code></p>
 <p>Dann sollten Sie das angefragte Paket, <code>ggside</code>, noch installieren auf üblichem Weg.</p>
 <p><a href="https://indrajeetpatil.github.io/ggstatsplot/articles/web_only/ggscatterstats.html">Quelle</a></p>
 </div>
 </div>
-<div id="fazit" class="section level2" number="6.4">
-<h2><span class="header-section-number">6.4</span> Fazit</h2>
+<div id="fazit" class="section level2" number="6.5">
+<h2><span class="header-section-number">6.5</span> Fazit</h2>
 <p>Ist doch schon recht ansehnlich, für fünf Minuten, oder?</p>
 </div>
-<div id="literaturhinweise-3" class="section level2" number="6.5">
-<h2><span class="header-section-number">6.5</span> Literaturhinweise</h2>
+<div id="literaturhinweise-3" class="section level2" number="6.6">
+<h2><span class="header-section-number">6.6</span> Literaturhinweise</h2>
 <p>Kapitel 11 bis 14 in <span class="citation">Sauer (<a href="#ref-sauer_moderne_2019" role="doc-biblioref">2019</a>)</span> geben eine Einführung in Datenvisualisierung mit <code>ggplot2</code>. Ein ganzes (und gutes) Buch zu dem, frei verfügbar, bietet Claus Wilke
 <a href="https://clauswilke.com/dataviz/">hier</a>.</p>
 
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="diagramme.html#cb39-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="diagramme.html#cb44-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 </div>
 </div>
 <h3>Literatur</h3>

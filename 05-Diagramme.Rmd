@@ -44,8 +44,8 @@ library("ggpubr")
 ## Daten importieren
 
 
-Falls Sie den Datensat `mtcars` nicht geladen haben (er als *nicht* im Reiter *Environment auftaucht),
-dann laden Sie den Datensatz noch schnell.
+Falls Sie den Datensatz `mtcars` nicht geladen haben (er als *nicht* im Reiter *Environment auftaucht),
+dann laden Sie den Datensatz noch schnell.^[Streng genommen, ist dieser Schritt *nicht* nötig, da `mtcars` mit R mitgeliefert wird. Der Übung und der Transparenz halber macht dieser Schritt aber Sinn.]
 
 Sie können einfach die folgende Syntax copy-pasten:
 
@@ -58,21 +58,23 @@ mtcars_path <- "https://vincentarelbundock.github.io/Rdatasets/csv/datasets/mtca
 mtcars <- import(mtcars_path)
 ```
 
-Oder Sie schauen im Kapitel [import] noch einmal nach.
+Oder Sie lesen im Kapitel [Daten importieren](#daten-importieren) noch einmal nach.
 
 
 Wenn es funktioniert hat, 
-dann sollte `mtcars` unter *Data* im Reiter *Environment* auftauchen.
+dann sollte `mtcars` unter *Data* im Reiter *Environment* auftauchen,
+s. Abb. \@ref(fig:mtcars-loaded).
 
-```{r}
-knitr::include_graphics()
+```{r mtcars-loaded, out.width = "50%", fig.cap = "So sieht's aus, wenn mtcars verfügbar ist auf Ihrem Computer", echo = FALSE}
+knitr::include_graphics("img/mtcars-loaded.png")
 ```
 
 
 
 ## Zwei Gruppen vergleichen
 
-Ein Klassiker: Zwei Gruppen vergleichen hinsichtlich ihres Mitelwerts oder Medians. Fangen wir mal damit an.
+Ein Klassiker: Zwei Gruppen vergleichen hinsichtlich ihres Mitelwerts oder Medians. 
+Fangen wir mal damit an:
 
 
 ```{r}
@@ -80,7 +82,7 @@ ggboxplot(mtcars, x = "am", y = "mpg")
 ```
 
 
-Merke: Die Argumente der Funktionen bei `ggppubr` sind:
+Merke: Die Argumente der Funktionen bei den Diagramm-Befehlen im R-Paket `ggppubr` sind:
 
 1. Name der Tabelle
 2. x: Variable auf der X-Achse
@@ -88,8 +90,8 @@ Merke: Die Argumente der Funktionen bei `ggppubr` sind:
 4. sonstiges
 
 
-Als nächstes, sehr ähnliches Diagramm, ein Violinenplot.
-Aber wir ergänzen noch  den Mittelwert pro Gruppe  (und dieses Mal mit der Anzahl der Zylinder auf der X-Achse):
+Als nächstes, sehr ähnliches Diagramm, probieren wir ein Violinenplot.
+Aber wir ergänzen noch den Mittelwert pro Gruppe  (und dieses Mal mit der Anzahl der Zylinder auf der X-Achse):
 
 ```{r}
 ggviolin(mtcars, x = "cyl", y = "mpg", add = "mean")
@@ -144,8 +146,11 @@ library("ggstatsplot")
 
 
 ```{r}
-ggbetweenstats(mtcars,x = am, y = mpg)
+ggbetweenstats(mtcars, x = am, y = mpg)
 ```
+
+
+
 
 Weitere Hinweise zum Gruppenvergleich finden sich [hier](https://indrajeetpatil.github.io/ggstatsplot/articles/web_only/ggbetweenstats.html).
 
