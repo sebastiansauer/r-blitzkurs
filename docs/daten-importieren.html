@@ -343,12 +343,12 @@ erkennen Sie die Spalten.</p>
 <p>Daten in den Formaten von Minitab, SAS, SPSS, Stata, Excel, CSV und andere kann man mit dem
 Paket <code>rio</code> importieren:</p>
 <p>Dann suchen wir uns einen Datensatz, z.B. ihn hier:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="daten-importieren.html#cb5-1" aria-hidden="true" tabindex="-1"></a>spss_path <span class="ot">&lt;-</span> <span class="st">&quot;https://cehd.gmu.edu/assets/dimitrovbook/Anxiety%202.sav&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="daten-importieren.html#cb12-1" aria-hidden="true" tabindex="-1"></a>spss_path <span class="ot">&lt;-</span> <span class="st">&quot;https://cehd.gmu.edu/assets/dimitrovbook/Anxiety%202.sav&quot;</span></span></code></pre></div>
 <div id="spss" class="section level3" number="4.3.1">
 <h3><span class="header-section-number">4.3.1</span> SPSS</h3>
 <p>Probieren wir es mit SPSS-Daten aus:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="daten-importieren.html#cb6-1" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">import</span>(spss_path)</span>
-<span id="cb6-2"><a href="daten-importieren.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(d)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="daten-importieren.html#cb13-1" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">import</span>(spss_path)</span>
+<span id="cb13-2"><a href="daten-importieren.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(d)</span></code></pre></div>
 <pre><code>##   subject anxiety tension trial1 trial2 trial3 trial4
 ## 1       1       1       1     18     14     12      6
 ## 2       2       1       1     19     12      8      4
@@ -360,24 +360,12 @@ Paket <code>rio</code> importieren:</p>
 </div>
 <div id="excel" class="section level3" number="4.3.2">
 <h3><span class="header-section-number">4.3.2</span> Excel</h3>
-<p>Oder mit Excel-Daten (.xsl und .xlsx):</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="daten-importieren.html#cb8-1" aria-hidden="true" tabindex="-1"></a>excel_path <span class="ot">&lt;-</span> <span class="st">&quot;https://file-examples-com.github.io/uploads/2017/02/file_example_XLS_10.xls&quot;</span></span>
-<span id="cb8-2"><a href="daten-importieren.html#cb8-2" aria-hidden="true" tabindex="-1"></a>xlsx_path <span class="ot">&lt;-</span> <span class="st">&quot;https://file-examples-com.github.io/uploads/2017/02/file_example_XLSX_10.xlsx&quot;</span></span></code></pre></div>
-<pre><code>##   0 First Name Last Name Gender       Country Age       Date   Id
-## 1 1      Dulce     Abril Female United States  32 15/10/2017 1562
-## 2 2       Mara Hashimoto Female Great Britain  25 16/08/2016 1582
-## 3 3     Philip      Gent   Male        France  36 21/05/2015 2587
-## 4 4   Kathleen    Hanner Female United States  25 15/10/2017 3549
-## 5 5    Nereida   Magwood Female United States  58 16/08/2016 2468
-## 6 6     Gaston     Brumm   Male United States  24 21/05/2015 2554</code></pre>
-<pre><code>##   0 First Name Last Name Gender       Country Age       Date   Id
-## 1 1      Dulce     Abril Female United States  32 15/10/2017 1562
-## 2 2       Mara Hashimoto Female Great Britain  25 16/08/2016 1582
-## 3 3     Philip      Gent   Male        France  36 21/05/2015 2587
-## 4 4   Kathleen    Hanner Female United States  25 15/10/2017 3549
-## 5 5    Nereida   Magwood Female United States  58 16/08/2016 2468
-## 6 6     Gaston     Brumm   Male United States  24 21/05/2015 2554</code></pre>
-<p>Die Daten stammen aus <a href="https://file-examples.com/index.php/sample-documents-download/sample-xls-download/">dieser Quelle</a>.</p>
+<p>Oder mit Excel-Daten (.xls und .xlsx):</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="daten-importieren.html#cb15-1" aria-hidden="true" tabindex="-1"></a>xlsx_path <span class="ot">&lt;-</span> <span class="st">&quot;https://github.com/sebastiansauer/Lehre/raw/main/data/excel-test.xlsx&quot;</span></span></code></pre></div>
+<pre><code>##   id var1         var2
+## 1  1    4        hallo
+## 2  2    5 hier spricht
+## 3  3    6        excel</code></pre>
 </div>
 </div>
 <div id="literaturhinweise-1" class="section level2" number="4.4">

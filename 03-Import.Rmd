@@ -122,28 +122,26 @@ Die Daten stammen aus [dieser Quelle](https://cehd.gmu.edu/book/dimitrov/spss).
 
 ### Excel
 
-Oder mit Excel-Daten (.xsl und .xlsx):
+Oder mit Excel-Daten (.xls und .xlsx):
 
 
 ```{r echo = TRUE}
-excel_path <- "https://file-examples-com.github.io/uploads/2017/02/file_example_XLS_10.xls"
-xlsx_path <- "https://file-examples-com.github.io/uploads/2017/02/file_example_XLSX_10.xlsx"
+xlsx_path <- "https://github.com/sebastiansauer/Lehre/raw/main/data/excel-test.xlsx"
 ```
 
 
+
+
 ```{r}
-d2 <- import(excel_path)
+download.file(xlsx_path, destfile = "test.xlsx")
+d2 <- rio::import("test.xlsx")
 head(d2)
 ```
 
 
-```{r}
-d3 <- import(xlsx_path)
-head(d3)
-```
 
 
-Die Daten stammen aus [dieser Quelle](https://file-examples.com/index.php/sample-documents-download/sample-xls-download/).
+
 
 
 

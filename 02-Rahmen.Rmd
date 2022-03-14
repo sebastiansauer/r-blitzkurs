@@ -64,6 +64,9 @@ ggplot(d) +
 ```
 
 
+Das ist grob gerechnet ein Faktor von 200 (der Unterschied von R zu SPSS).
+
+
 
 ## Architektur von R
 
@@ -279,7 +282,7 @@ In jeder Programmiersprache kann man Variablen definieren,
 so auch in R:
 
 
-```{r}
+```{r echo = TRUE}
 richtige_antwort <- 42
 falsche_antwort <- 43
 typ <- "Antwort"
@@ -308,7 +311,7 @@ knitr::include_graphics("img/Variablen_zuweisen.png")
 
 R kann übrigens auch rechnen:
 
-```{r}
+```{r echo = TRUE}
 die_summe <- falsche_antwort + richtige_antwort
 ```
 
@@ -327,21 +330,21 @@ Aber was ist jetzt der Wert, der "Inhalt" der Variable `die_summe`?
 Um den Wert, d.h. den Inhalt einer Variablen in R *auszulesen*, 
 geben wir einfach den Namen des Objekts ein:
 
-```{r}
+```{r echo = TRUE}
 die_summe
 ```
 
 
 Was passiert wohl, wenn wir `die_summe` jetzt wie folgt definieren:
 
-```{r}
+```{r echo = TRUE}
 die_summe <- falsche_antwort + richtige_antwort + 1
 ```
 
 
-Wer hät's geahnt:
+Wer hätt's geahnt:
 
-```{r}
+```{r echo = TRUE}
 die_summe
 ```
 
@@ -367,7 +370,7 @@ Ein weiteres Beispiel für eine Funktion ist:
 
 Das geht so:
 
-```{r}
+```{r echo = TRUE}
 Antworten <- c(42, 43)
 ```
 
@@ -388,7 +391,7 @@ Berechnen wir also unsere erste statistische Funktion:
 Den Mittelwert. Puh.
 
 
-```{r}
+```{r echo = TRUE}
 mean(Antworten)
 ```
 

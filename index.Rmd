@@ -72,12 +72,13 @@ knitr::include_graphics(p_path)
 ## tl;dr
 
 - Einführung in die Statistik-Software R
+- Überblick über den Prozess der Datenanalyse
 - keine Vorkenntnisse nötig
 - Dauer: 60-90 Min.
 - online (Zoom)
 - Dozent: Sebastian Sauer
 - Vorbereitung: Konto bei RStudio Cloud anlegen
-- Die zentrale Software ist diess [RStudio Cloud Projekt](https://rstudio.cloud/project/3421620).
+- Die zentrale Software ist dieses [RStudio Cloud Projekt](https://rstudio.cloud/project/3421620).
 
 
 ## Was Sie hier lernen und wozu das gut ist

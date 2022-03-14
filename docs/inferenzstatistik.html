@@ -296,7 +296,7 @@ Das sind alles Spezialfälle der Regressionsanalyse.</p>
 das rechnerisch exakt gleiche Ergebnis<a href="literatur.html#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
 <p>In R heißt der Befehl für eine Regressionsanalyse <code>lm()</code> (wie lineares Modell).</p>
 <p>In unserem Fall:</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="inferenzstatistik.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(mpg <span class="sc">~</span> am, <span class="at">data =</span> mtcars)  <span class="co"># AV ~ UV</span></span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="inferenzstatistik.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(mpg <span class="sc">~</span> am, <span class="at">data =</span> mtcars)  <span class="co"># AV ~ UV</span></span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = mpg ~ am, data = mtcars)
@@ -307,12 +307,12 @@ das rechnerisch exakt gleiche Ergebnis<a href="literatur.html#fn2" class="footno
 <p>Dabei ist <code>mpg</code> die AV (Zielvariable) und <code>am</code> die UV (Inputvariable), und <code>data</code> spezifiziert den Namen der Datentabelle.</p>
 <p>Das Ergebnis sagt uns, dass es einen Unterschied von ca. 7,3 Meilen pro Gallone Sprit gibt (im Mittelwert) zwischen den Gruppen.</p>
 <p>Viellicht visualisieren wir uns das schnell mal:</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="inferenzstatistik.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggscatter</span>(mtcars, <span class="at">x =</span> <span class="st">&quot;am&quot;</span>, <span class="at">y =</span> <span class="st">&quot;mpg&quot;</span>,</span>
-<span id="cb35-2"><a href="inferenzstatistik.html#cb35-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">add =</span> <span class="st">&quot;reg.line&quot;</span>,</span>
-<span id="cb35-3"><a href="inferenzstatistik.html#cb35-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">conf.int =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb35-4"><a href="inferenzstatistik.html#cb35-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">mean.point =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb35-5"><a href="inferenzstatistik.html#cb35-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">cor.coef =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
-<p><img src="chunk-img/unnamed-chunk-37-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="inferenzstatistik.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggscatter</span>(mtcars, <span class="at">x =</span> <span class="st">&quot;am&quot;</span>, <span class="at">y =</span> <span class="st">&quot;mpg&quot;</span>,</span>
+<span id="cb41-2"><a href="inferenzstatistik.html#cb41-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">add =</span> <span class="st">&quot;reg.line&quot;</span>,</span>
+<span id="cb41-3"><a href="inferenzstatistik.html#cb41-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">conf.int =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb41-4"><a href="inferenzstatistik.html#cb41-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">mean.point =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb41-5"><a href="inferenzstatistik.html#cb41-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">cor.coef =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<p><img src="chunk-img/unnamed-chunk-36-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <p>Die Linie im Diagramm ist die Regressionslinie. Der graue Schleier das 95%-Konfidenzintervall.</p>
 <p>Und: wir haben schon einen p-Wert, und zwar für die Korrelation (R) der beiden Größen.
 Das ist aber nicht der p-Wert für den Gruppenunterschied.
@@ -326,8 +326,8 @@ Oh, hab ich das gerade gesagt? Naja, so machen es jedenfalls die meisten.</p>
 Ohne p-Wert, habe ich schmerzlich gelernt, kann man nicht publizieren,
 aber mit einem schönen p-Wert, da stünde die Welt offen, hab ich gehört.</p>
 <p>Also gut, holen wir uns den p-Wert für den Gruppenunterschied. Dafür müssen wir Folgendes tun:</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="inferenzstatistik.html#cb36-1" aria-hidden="true" tabindex="-1"></a>lm1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(mpg <span class="sc">~</span> am, <span class="at">data =</span> mtcars)</span>
-<span id="cb36-2"><a href="inferenzstatistik.html#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm1)</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="inferenzstatistik.html#cb42-1" aria-hidden="true" tabindex="-1"></a>lm1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(mpg <span class="sc">~</span> am, <span class="at">data =</span> mtcars)</span>
+<span id="cb42-2"><a href="inferenzstatistik.html#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm1)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = mpg ~ am, data = mtcars)
@@ -363,8 +363,8 @@ Für die Praxis genügt es vielen (leider Gottes) zu sagen: <span class="math in
 <div id="visualisierung" class="section level2" number="7.4">
 <h2><span class="header-section-number">7.4</span> Visualisierung</h2>
 <p>Nutzen wir zur Visualisierung unseres Regressionsmodells wieder das Paket <code>ggstatsplot</code>:</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="inferenzstatistik.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggcoefstats</span>(lm1)</span></code></pre></div>
-<p><img src="chunk-img/unnamed-chunk-39-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="inferenzstatistik.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggcoefstats</span>(lm1)</span></code></pre></div>
+<p><img src="chunk-img/unnamed-chunk-38-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <p>Es gibt einen <a href="https://indrajeetpatil.github.io/ggstatsplot/reference/ggcoefstats.html">Haufen Konfigurationsmöglichkeiten für diese Funktion</a>.
 Aber natürlich ist man flexibler,
 wenn man das Diagramm gleich selber von Grund auf erstellen würde.</p>
