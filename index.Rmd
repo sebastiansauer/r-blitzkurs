@@ -48,22 +48,36 @@ knitr::write_bib(c(
 
 
 
-
-
 # Überblick
 
 
 
 
 
-```{r out.width="25%"}
+
+```{r out.width="25%", fig.cap = "Autor: Allison, Horst, CC-BY", eval = FALSE}
 p_path <- "img/data_cowboy.png"
 stopifnot(file.exists(p_path))
 knitr::include_graphics(p_path)
 ```
 
 
-[Autor: Allison Horst, CC-BY](https://github.com/allisonhorst/stats-illustrations)
+<!-- [Autor: Allison Horst, CC-BY](https://github.com/allisonhorst/stats-illustrations) -->
+
+<center>
+<font size="15"> 
+```{r fa, message=FALSE, echo = FALSE, results='hold'}
+library(fontawesome)
+fa("r-project", fill = "steelblue")
+fa("bolt-lightning", fill = "steelblue")
+fa("discourse", fill = "steelblue")
+fa("rocket", fill = "steelblue")
+```
+
+
+</font>
+</center>
+
 
 
 

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>R-Blitzkurs ⚡</title>
   <meta name="description" content="Ein kurzer Einführungskurs in die Datenanalyse mit R" />
-  <meta name="generator" content="bookdown 0.24.2 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="R-Blitzkurs ⚡" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Ein kurzer Einführungskurs in die Datenanalyse mit R" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
@@ -32,7 +31,6 @@
   
 
 <link rel="next" href="hinweise.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,8 +48,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -184,7 +183,8 @@ div.csl-indent {
 <li class="chapter" data-level="2.10.2" data-path="hinweise.html"><a href="hinweise.html#lerntipps"><i class="fa fa-check"></i><b>2.10.2</b> Lerntipps</a></li>
 </ul></li>
 <li class="chapter" data-level="2.11" data-path="hinweise.html"><a href="hinweise.html#umgangsformen"><i class="fa fa-check"></i><b>2.11</b> Umgangsformen</a></li>
-<li class="chapter" data-level="2.12" data-path="hinweise.html"><a href="hinweise.html#salvatorische-klausel"><i class="fa fa-check"></i><b>2.12</b> Salvatorische Klausel</a></li>
+<li class="chapter" data-level="2.12" data-path="hinweise.html"><a href="hinweise.html#wenn-der-unterricht-ausfällt"><i class="fa fa-check"></i><b>2.12</b> Wenn der Unterricht ausfällt</a></li>
+<li class="chapter" data-level="2.13" data-path="hinweise.html"><a href="hinweise.html#salvatorische-klausel"><i class="fa fa-check"></i><b>2.13</b> Salvatorische Klausel</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="rahmen.html"><a href="rahmen.html"><i class="fa fa-check"></i><b>3</b> Rahmen</a>
 <ul>
@@ -273,14 +273,21 @@ div.csl-indent {
 <div id="header">
 <h1 class="title">R-Blitzkurs ⚡</h1>
 <p class="author"><em>Sebastian Sauer</em></p>
-<p class="date"><em>Letzte Aktualisierung: 2022-03-14 09:36:35</em></p>
+<p class="date"><em>Letzte Aktualisierung: 2022-07-27 17:04:14</em></p>
 </div>
-<div id="überblick" class="section level1" number="1">
-<h1><span class="header-section-number">Kapitel 1</span> Überblick</h1>
-<p><img src="img/data_cowboy.png" width="25%" style="display: block; margin: auto;" /></p>
-<p><a href="https://github.com/allisonhorst/stats-illustrations">Autor: Allison Horst, CC-BY</a></p>
-<div id="tldr" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> tl;dr</h2>
+<div id="überblick" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Kapitel 1</span> Überblick<a href="index.html#überblick" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<!-- [Autor: Allison Horst, CC-BY](https://github.com/allisonhorst/stats-illustrations) -->
+<center>
+<p><font size="15"></p>
+<svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+<svg aria-hidden="true" role="img" viewBox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M381.2 172.8C377.1 164.9 368.9 160 360 160h-156.6l50.84-127.1c2.969-7.375 2.062-15.78-2.406-22.38S239.1 0 232 0h-176C43.97 0 33.81 8.906 32.22 20.84l-32 240C-.7179 267.7 1.376 274.6 5.938 279.8C10.5 285 17.09 288 24 288h146.3l-41.78 194.1c-2.406 11.22 3.469 22.56 14 27.09C145.6 511.4 148.8 512 152 512c7.719 0 15.22-3.75 19.81-10.44l208-304C384.8 190.2 385.4 180.7 381.2 172.8z"/></svg>
+<svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M225.9 32C103.3 32 0 130.5 0 252.1 0 256 .1 480 .1 480l225.8-.2c122.7 0 222.1-102.3 222.1-223.9C448 134.3 348.6 32 225.9 32zM224 384c-19.4 0-37.9-4.3-54.4-12.1L88.5 392l22.9-75c-9.8-18.1-15.4-38.9-15.4-61 0-70.7 57.3-128 128-128s128 57.3 128 128-57.3 128-128 128z"/></svg>
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M156.6 384.9L125.7 353.1C117.2 345.5 114.2 333.1 117.1 321.8C120.1 312.9 124.1 301.3 129.8 288H24C15.38 288 7.414 283.4 3.146 275.9C-1.123 268.4-1.042 259.2 3.357 251.8L55.83 163.3C68.79 141.4 92.33 127.1 117.8 127.1H200C202.4 124 204.8 120.3 207.2 116.7C289.1-4.07 411.1-8.142 483.9 5.275C495.6 7.414 504.6 16.43 506.7 28.06C520.1 100.9 516.1 222.9 395.3 304.8C391.8 307.2 387.1 309.6 384 311.1V394.2C384 419.7 370.6 443.2 348.7 456.2L260.2 508.6C252.8 513 243.6 513.1 236.1 508.9C228.6 504.6 224 496.6 224 488V380.8C209.9 385.6 197.6 389.7 188.3 392.7C177.1 396.3 164.9 393.2 156.6 384.9V384.9zM384 167.1C406.1 167.1 424 150.1 424 127.1C424 105.9 406.1 87.1 384 87.1C361.9 87.1 344 105.9 344 127.1C344 150.1 361.9 167.1 384 167.1z"/></svg>
+</font>
+</center>
+<div id="tldr" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> tl;dr<a href="index.html#tldr" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>Einführung in die Statistik-Software R</li>
 <li>Überblick über den Prozess der Datenanalyse</li>
@@ -292,8 +299,8 @@ div.csl-indent {
 <li>Die zentrale Software ist dieses <a href="https://rstudio.cloud/project/3421620">RStudio Cloud Projekt</a>.</li>
 </ul>
 </div>
-<div id="was-sie-hier-lernen-und-wozu-das-gut-ist" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Was Sie hier lernen und wozu das gut ist</h2>
+<div id="was-sie-hier-lernen-und-wozu-das-gut-ist" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Was Sie hier lernen und wozu das gut ist<a href="index.html#was-sie-hier-lernen-und-wozu-das-gut-ist" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>R ist die führende Software für Datenanalyse und insofern Eintrittskarte in das Datenzeitalter.
 Sie würden gerne R kennenlernen, aber das kostet Sie zu viel Zeit?
 Dann kommen Sie zum R-Blitzkurs! In 60 Minuten lernen Sie zentrale Schritte der Datenanalyse.
@@ -303,16 +310,16 @@ Aus dem Inhalt: Daten importieren in R, deskriptive Statistiken erstellen, Diagr
 Sie brauchen keine Software vorab installieren; im Kurs wird Ihnen eine Online-Version von R bereitgestellt (kostenlos).
 Es ist aber nötig, sich ein Konto dafür vorab anzulegen, bitte lesen Sie die Details in der Kursbeschreibung.</p>
 </div>
-<div id="lernziele" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Lernziele</h2>
+<div id="lernziele" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Lernziele<a href="index.html#lernziele" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Nach dem Absolvieren dieses Kurses …</p>
 <ul>
 <li>können die Teilnehmis einige zentrale Tätigkeiten der Datenanalyse in R durchführen</li>
 <li>sind die Teilnehmis in der Lage, selber Analysen mit R durchzuführen</li>
 </ul>
 </div>
-<div id="inhaltsüberblick" class="section level2" number="1.4">
-<h2><span class="header-section-number">1.4</span> Inhaltsüberblick</h2>
+<div id="inhaltsüberblick" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Inhaltsüberblick<a href="index.html#inhaltsüberblick" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In diesem Kurs werden folgende Themen behandelt:</p>
 <ul>
 <li>Daten importieren und exportieren</li>
@@ -322,16 +329,16 @@ Es ist aber nötig, sich ein Konto dafür vorab anzulegen, bitte lesen Sie die D
 </ul>
 <p>Alle Inhalte werden mit dem Statistikprogramm <em>R</em> umgesetzt.</p>
 </div>
-<div id="vorbereitung-vor-dem-kurs" class="section level2" number="1.5">
-<h2><span class="header-section-number">1.5</span> Vorbereitung vor dem Kurs</h2>
+<div id="vorbereitung-vor-dem-kurs" class="section level2 hasAnchor" number="1.5">
+<h2><span class="header-section-number">1.5</span> Vorbereitung vor dem Kurs<a href="index.html#vorbereitung-vor-dem-kurs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>Legen Sie sich ein Konto an bei <a href="https://rstudio.cloud/plans/free">RStudio Cloud</a>; s. auch die Hinweise dazu <a href="https://data-se.netlify.app/2021/11/30/installation-von-r-und-seiner-freunde/#rstudio-cloud">hier</a>. In der kostenfreien Lizenz von RStudio Cloud sind 25h Nutzungszeit pro Monat enthalten.</li>
 <li>Alternativ können Sie sich R installieren wie <a href="https://data-se.netlify.app/2021/11/30/installation-von-r-und-seiner-freunde/">hier beschrieben</a> (kostenlos).</li>
 <li>Werfen Sie einen Blick in das <a href="https://rstudio.cloud/project/3421620">RStudio Cloud Projekt dieses Kurses</a>.</li>
 </ul>
 </div>
-<div id="modulliteratur" class="section level2" number="1.6">
-<h2><span class="header-section-number">1.6</span> Modulliteratur</h2>
+<div id="modulliteratur" class="section level2 hasAnchor" number="1.6">
+<h2><span class="header-section-number">1.6</span> Modulliteratur<a href="index.html#modulliteratur" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Ein Teil der Literatur ist über viele Hochschulbibliotheken als PDF herunterladen;
 andere Titel sind offen im Internet verfügbar.
 Oft müssen Sie per VPN angemeldet (in der Bib.) sein für Volltextzugriff, wenn Sie nicht auf dem Campus sind.</p>
@@ -339,7 +346,7 @@ Oft müssen Sie per VPN angemeldet (in der Bib.) sein für Volltextzugriff, wenn
 
 </div>
 </div>
-<h3>Literatur</h3>
+<h3>Literatur<a href="literatur.html#literatur" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-sauer_moderne_2019" class="csl-entry">
 Sauer, Sebastian. 2019. <em>Moderne <span>Datenanalyse</span> Mit <span>R</span>: <span>Daten</span> Einlesen, Aufbereiten, Visualisieren Und Modellieren</em>. 1. Auflage 2019. <span>FOM</span>-<span>Edition</span>. Wiesbaden: Springer. <a href="https://www.springer.com/de/book/9783658215866">https://www.springer.com/de/book/9783658215866</a>.

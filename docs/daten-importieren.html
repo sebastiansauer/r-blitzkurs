@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Kapitel 4 Daten importieren | R-Blitzkurs ⚡</title>
   <meta name="description" content="Ein kurzer Einführungskurs in die Datenanalyse mit R" />
-  <meta name="generator" content="bookdown 0.24.2 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Kapitel 4 Daten importieren | R-Blitzkurs ⚡" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Ein kurzer Einführungskurs in die Datenanalyse mit R" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
@@ -32,7 +31,6 @@
   
 <link rel="prev" href="rahmen.html"/>
 <link rel="next" href="deskriptive-statistik.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,8 +48,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -184,7 +183,8 @@ div.csl-indent {
 <li class="chapter" data-level="2.10.2" data-path="hinweise.html"><a href="hinweise.html#lerntipps"><i class="fa fa-check"></i><b>2.10.2</b> Lerntipps</a></li>
 </ul></li>
 <li class="chapter" data-level="2.11" data-path="hinweise.html"><a href="hinweise.html#umgangsformen"><i class="fa fa-check"></i><b>2.11</b> Umgangsformen</a></li>
-<li class="chapter" data-level="2.12" data-path="hinweise.html"><a href="hinweise.html#salvatorische-klausel"><i class="fa fa-check"></i><b>2.12</b> Salvatorische Klausel</a></li>
+<li class="chapter" data-level="2.12" data-path="hinweise.html"><a href="hinweise.html#wenn-der-unterricht-ausfällt"><i class="fa fa-check"></i><b>2.12</b> Wenn der Unterricht ausfällt</a></li>
+<li class="chapter" data-level="2.13" data-path="hinweise.html"><a href="hinweise.html#salvatorische-klausel"><i class="fa fa-check"></i><b>2.13</b> Salvatorische Klausel</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="rahmen.html"><a href="rahmen.html"><i class="fa fa-check"></i><b>3</b> Rahmen</a>
 <ul>
@@ -270,10 +270,10 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="daten-importieren" class="section level1" number="4">
-<h1><span class="header-section-number">Kapitel 4</span> Daten importieren</h1>
-<div id="csv-dateien-importieren" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> CSV-Dateien importieren</h2>
+<div id="daten-importieren" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Kapitel 4</span> Daten importieren<a href="daten-importieren.html#daten-importieren" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="csv-dateien-importieren" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> CSV-Dateien importieren<a href="daten-importieren.html#csv-dateien-importieren" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In der Datenanalyse ist das gebräuchlichste Format für Daten in Tabellenform die <em>CSV-Datei</em>.
 Das hat den Grund, weil dieses Format technisch schön einfach ist.
 Für uns Endverbraucher tut das nichts groß zur Sache, die CSV-Datei beherbergt
@@ -326,8 +326,8 @@ Figure 4.4: Die ersten Zeilen der Tabelle ‘mtcars’
 </p>
 </div>
 </div>
-<div id="csv-dateien-von-innen" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> CSV-Dateien von innen</h2>
+<div id="csv-dateien-von-innen" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> CSV-Dateien von innen<a href="daten-importieren.html#csv-dateien-von-innen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Ein Blick in die Motorhaube:
 So sieht eine CSV-Datei aus, wenn Sie sie mit einem Text-Editor öffnen.</p>
 <pre><code>&quot;&quot;,&quot;mpg&quot;,&quot;cyl&quot;,&quot;disp&quot;,&quot;hp&quot;,&quot;drat&quot;,&quot;wt&quot;,&quot;qsec&quot;,&quot;vs&quot;,&quot;am&quot;,&quot;gear&quot;,&quot;carb&quot;
@@ -340,14 +340,14 @@ So sieht eine CSV-Datei aus, wenn Sie sie mit einem Text-Editor öffnen.</p>
 Wenn Sie lange genug in die Matrix starren,
 erkennen Sie die Spalten.</p>
 </div>
-<div id="spss--und-excel-dateien-importieren-mit-rio" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> SPSS- und Excel-Dateien importieren mit <code>rio</code></h2>
+<div id="spss--und-excel-dateien-importieren-mit-rio" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> SPSS- und Excel-Dateien importieren mit <code>rio</code><a href="daten-importieren.html#spss--und-excel-dateien-importieren-mit-rio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Daten in den Formaten von Minitab, SAS, SPSS, Stata, Excel, CSV und andere kann man mit dem
 Paket <code>rio</code> importieren:</p>
 <p>Dann suchen wir uns einen Datensatz, z.B. ihn hier:</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="daten-importieren.html#cb12-1" aria-hidden="true" tabindex="-1"></a>spss_path <span class="ot">&lt;-</span> <span class="st">&quot;https://cehd.gmu.edu/assets/dimitrovbook/Anxiety%202.sav&quot;</span></span></code></pre></div>
-<div id="spss" class="section level3" number="4.3.1">
-<h3><span class="header-section-number">4.3.1</span> SPSS</h3>
+<div id="spss" class="section level3 hasAnchor" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> SPSS<a href="daten-importieren.html#spss" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Probieren wir es mit SPSS-Daten aus:</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="daten-importieren.html#cb13-1" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">import</span>(spss_path)</span>
 <span id="cb13-2"><a href="daten-importieren.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(d)</span></code></pre></div>
@@ -360,8 +360,8 @@ Paket <code>rio</code> importieren:</p>
 ## 6       6       1       2     18     10      5      1</code></pre>
 <p>Die Daten stammen aus <a href="https://cehd.gmu.edu/book/dimitrov/spss">dieser Quelle</a>.</p>
 </div>
-<div id="excel" class="section level3" number="4.3.2">
-<h3><span class="header-section-number">4.3.2</span> Excel</h3>
+<div id="excel" class="section level3 hasAnchor" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> Excel<a href="daten-importieren.html#excel" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Oder mit Excel-Daten (.xls und .xlsx):</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="daten-importieren.html#cb15-1" aria-hidden="true" tabindex="-1"></a>xlsx_path <span class="ot">&lt;-</span> <span class="st">&quot;https://github.com/sebastiansauer/Lehre/raw/main/data/excel-test.xlsx&quot;</span></span></code></pre></div>
 <div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="daten-importieren.html#cb16-1" aria-hidden="true" tabindex="-1"></a>d2 <span class="ot">&lt;-</span> <span class="fu">import</span>(xlsx_path)</span>
@@ -372,18 +372,18 @@ Paket <code>rio</code> importieren:</p>
 ## 3  3    6        excel</code></pre>
 </div>
 </div>
-<div id="export" class="section level2" number="4.4">
-<h2><span class="header-section-number">4.4</span> Export</h2>
+<div id="export" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Export<a href="daten-importieren.html#export" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Und hier ist Ihre “RExit-Strategie”:</p>
 <p>Mit <code>export()</code> (aus dem Paket <code>rio</code>) können Sie Tabellen aus R exportieren.</p>
 </div>
-<div id="literaturhinweise-1" class="section level2" number="4.5">
-<h2><span class="header-section-number">4.5</span> Literaturhinweise</h2>
+<div id="literaturhinweise-1" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Literaturhinweise<a href="daten-importieren.html#literaturhinweise-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Weitere Hinweise findet man z.B. in <span class="citation">Sauer (<a href="#ref-sauer_moderne_2019" role="doc-biblioref">2019</a>)</span> oder in <span class="citation">Ismay and Kim (<a href="#ref-ismay_moderndive_2019" role="doc-biblioref">2019</a>)</span>.</p>
 
 </div>
 </div>
-<h3>Literatur</h3>
+<h3>Literatur<a href="literatur.html#literatur" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-ismay_moderndive_2019" class="csl-entry">
 Ismay, Chester, and Albert Kim. 2019. <span>“<span>ModernDive</span> - <span>An</span> <span>Introduction</span> to <span>Statistical</span> and <span>Data</span> <span>Sciences</span> via <span>R</span>.”</span> <a href="http://moderndive.com/">http://moderndive.com/</a>.

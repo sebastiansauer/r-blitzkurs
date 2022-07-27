@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Kapitel 7 Inferenzstatistik | R-Blitzkurs ⚡</title>
   <meta name="description" content="Ein kurzer Einführungskurs in die Datenanalyse mit R" />
-  <meta name="generator" content="bookdown 0.24.2 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Kapitel 7 Inferenzstatistik | R-Blitzkurs ⚡" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Ein kurzer Einführungskurs in die Datenanalyse mit R" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
@@ -32,7 +31,6 @@
   
 <link rel="prev" href="diagramme.html"/>
 <link rel="next" href="literatur.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,8 +48,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -184,7 +183,8 @@ div.csl-indent {
 <li class="chapter" data-level="2.10.2" data-path="hinweise.html"><a href="hinweise.html#lerntipps"><i class="fa fa-check"></i><b>2.10.2</b> Lerntipps</a></li>
 </ul></li>
 <li class="chapter" data-level="2.11" data-path="hinweise.html"><a href="hinweise.html#umgangsformen"><i class="fa fa-check"></i><b>2.11</b> Umgangsformen</a></li>
-<li class="chapter" data-level="2.12" data-path="hinweise.html"><a href="hinweise.html#salvatorische-klausel"><i class="fa fa-check"></i><b>2.12</b> Salvatorische Klausel</a></li>
+<li class="chapter" data-level="2.12" data-path="hinweise.html"><a href="hinweise.html#wenn-der-unterricht-ausfällt"><i class="fa fa-check"></i><b>2.12</b> Wenn der Unterricht ausfällt</a></li>
+<li class="chapter" data-level="2.13" data-path="hinweise.html"><a href="hinweise.html#salvatorische-klausel"><i class="fa fa-check"></i><b>2.13</b> Salvatorische Klausel</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="rahmen.html"><a href="rahmen.html"><i class="fa fa-check"></i><b>3</b> Rahmen</a>
 <ul>
@@ -270,14 +270,14 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="inferenzstatistik" class="section level1" number="7">
-<h1><span class="header-section-number">Kapitel 7</span> Inferenzstatistik</h1>
+<div id="inferenzstatistik" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Kapitel 7</span> Inferenzstatistik<a href="inferenzstatistik.html#inferenzstatistik" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Kommen wir zur “Königsklasse” der Datenanalyse: Der Inferenzstatistik (?)</p>
 <p>Generationen von Studentis haben Sie schon <del>gehasst</del>, sich mit ihr kritisch auseinander gesetzt,
 Semester um Semester.</p>
 <p>Wir machen da kurzen Prozess. Ein paar Minuten müssen reichen.</p>
-<div id="die-regression-als-schweizer-taschenmesser" class="section level2" number="7.1">
-<h2><span class="header-section-number">7.1</span> Die Regression als Schweizer Taschenmesser</h2>
+<div id="die-regression-als-schweizer-taschenmesser" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Die Regression als Schweizer Taschenmesser<a href="inferenzstatistik.html#die-regression-als-schweizer-taschenmesser" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Vielleicht hat es Ihnen Ihr Statistik-Dozenti nicht gesagt,
 aber: Es reicht, wenn man ein einziges Verfahren der Inferenzstatistik kann.
 Ja, eines.
@@ -291,11 +291,11 @@ Das sind alles Spezialfälle der Regressionsanalyse.</p>
 <p>Also, schauen wir uns mal eine Regressionsanalyse an.</p>
 <p>Übrigens, eine Regressionsanalyse nennt man auch <em>lineares Modell</em>.</p>
 </div>
-<div id="unterschied-im-spritverbrauch-zwischen-den-getriebarten" class="section level2" number="7.2">
-<h2><span class="header-section-number">7.2</span> Unterschied im Spritverbrauch zwischen den Getriebarten</h2>
+<div id="unterschied-im-spritverbrauch-zwischen-den-getriebarten" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Unterschied im Spritverbrauch zwischen den Getriebarten<a href="inferenzstatistik.html#unterschied-im-spritverbrauch-zwischen-den-getriebarten" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Forschungsfrage: <em>Unterscheiden sich die Mittelwerte des Spritverbrauchs der beiden Gruppen von Getriebart (manuelle Schaltung vs. Automatik-Schaltung)?</em></p>
 <p>Das könnte man mit einem t-Test rechnen, aber die Regressionsanalyse bringt
-das rechnerisch exakt gleiche Ergebnis<a href="literatur.html#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
+das rechnerisch exakt gleiche Ergebnis<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
 <p>In R heißt der Befehl für eine Regressionsanalyse <code>lm()</code> (wie lineares Modell).</p>
 <p>In unserem Fall:</p>
 <div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="inferenzstatistik.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(mpg <span class="sc">~</span> am, <span class="at">data =</span> mtcars)  <span class="co"># AV ~ UV</span></span></code></pre></div>
@@ -322,8 +322,8 @@ Da stellt sich die Frage, wenn es mehrere p-Werte gibt, welche man nehmen soll.
 Naja, am besten den, der einem gut in den Kram passt.
 Oh, hab ich das gerade gesagt? Naja, so machen es jedenfalls die meisten.</p>
 </div>
-<div id="aber-ich-liebe-den-p-wert" class="section level2" number="7.3">
-<h2><span class="header-section-number">7.3</span> Aber ich liebe den p-Wert!</h2>
+<div id="aber-ich-liebe-den-p-wert" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Aber ich liebe den p-Wert!<a href="inferenzstatistik.html#aber-ich-liebe-den-p-wert" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Ok, ich liebe ihn nicht, aber alle Welt spricht von den p-Wert.
 Ohne p-Wert, habe ich schmerzlich gelernt, kann man nicht publizieren,
 aber mit einem schönen p-Wert, da stünde die Welt offen, hab ich gehört.</p>
@@ -366,8 +366,8 @@ Für die Praxis genügt es vielen (leider Gottes) zu sagen:
 Wenn Ihnen <code>lm1</code> nicht gefällt, dann können Sie auch z.B. als Namen wählen
 <code>mein_cooles_lineares_Modell</code>.</p>
 </div>
-<div id="visualisierung" class="section level2" number="7.4">
-<h2><span class="header-section-number">7.4</span> Visualisierung</h2>
+<div id="visualisierung" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Visualisierung<a href="inferenzstatistik.html#visualisierung" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Nutzen wir zur Visualisierung unseres Regressionsmodells <code>lm1</code> wieder das Paket <code>ggstatsplot</code>:</p>
 <div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="inferenzstatistik.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggcoefstats</span>(lm1)</span></code></pre></div>
 <p><img src="chunk-img/unnamed-chunk-42-1.png" width="100%" style="display: block; margin: auto;" /></p>
@@ -375,13 +375,13 @@ Wenn Ihnen <code>lm1</code> nicht gefällt, dann können Sie auch z.B. als Namen
 Aber natürlich ist man flexibler,
 wenn man das Diagramm gleich selber von Grund auf erstellen würde.</p>
 </div>
-<div id="fazit-1" class="section level2" number="7.5">
-<h2><span class="header-section-number">7.5</span> Fazit</h2>
+<div id="fazit-1" class="section level2 hasAnchor" number="7.5">
+<h2><span class="header-section-number">7.5</span> Fazit<a href="inferenzstatistik.html#fazit-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Mit gleicher Manier, d.h. via <code>lm()</code>, können wir (fast) beliebige
 Forschungsfragen auf ihre Signifikanz hin untersuchen.</p>
 </div>
-<div id="weiterführende-hinweise" class="section level2" number="7.6">
-<h2><span class="header-section-number">7.6</span> Weiterführende Hinweise</h2>
+<div id="weiterführende-hinweise" class="section level2 hasAnchor" number="7.6">
+<h2><span class="header-section-number">7.6</span> Weiterführende Hinweise<a href="inferenzstatistik.html#weiterführende-hinweise" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Grundlagen des Modellierens finden sich in <span class="citation">Sauer (<a href="#ref-sauer_moderne_2019" role="doc-biblioref">2019</a>)</span>.
 Eine nützliche und moderne Einführung, frei verfügbar, findet sich bei <span class="citation">Cetinkaya-Rundel and Hardin (<a href="#ref-cetinkaya-rundel_introduction_2021" role="doc-biblioref">2021</a>)</span>, <a href="https://openintro-ims.netlify.app/">hier</a>.
 Die Idee, die Regression als Schweizer Offiziersmesser der Datenanalyse zu nutzen,
@@ -389,7 +389,7 @@ kann man <a href="https://lindeloev.github.io/tests-as-linear/">hier</a> nachles
 
 </div>
 </div>
-<h3>Literatur</h3>
+<h3>Literatur<a href="literatur.html#literatur" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-cetinkaya-rundel_introduction_2021" class="csl-entry">
 Cetinkaya-Rundel, Mine, and Johanna Hardin. 2021. <em>Introduction to <span>Modern</span> <span>Statistics</span></em>. <a href="https://openintro-ims.netlify.app/">https://openintro-ims.netlify.app/</a>.
@@ -397,6 +397,12 @@ Cetinkaya-Rundel, Mine, and Johanna Hardin. 2021. <em>Introduction to <span>Mode
 <div id="ref-sauer_moderne_2019" class="csl-entry">
 Sauer, Sebastian. 2019. <em>Moderne <span>Datenanalyse</span> Mit <span>R</span>: <span>Daten</span> Einlesen, Aufbereiten, Visualisieren Und Modellieren</em>. 1. Auflage 2019. <span>FOM</span>-<span>Edition</span>. Wiesbaden: Springer. <a href="https://www.springer.com/de/book/9783658215866">https://www.springer.com/de/book/9783658215866</a>.
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="3">
+<li id="fn3"><p>unter der Annahme identischer Varianzen in den Gruppen. Diese Annahme hat der t-Test zwar auch, aber in vielen Softwarepaketen wird dann stillschweigend zur Welch-Variante des d-Tests umgeschwenkt, bei der diese Annahme aufgegeben wird.<a href="inferenzstatistik.html#fnref3" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 

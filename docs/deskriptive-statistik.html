@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Kapitel 5 Deskriptive Statistik | R-Blitzkurs ⚡</title>
   <meta name="description" content="Ein kurzer Einführungskurs in die Datenanalyse mit R" />
-  <meta name="generator" content="bookdown 0.24.2 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Kapitel 5 Deskriptive Statistik | R-Blitzkurs ⚡" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Ein kurzer Einführungskurs in die Datenanalyse mit R" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
@@ -32,7 +31,6 @@
   
 <link rel="prev" href="daten-importieren.html"/>
 <link rel="next" href="diagramme.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,8 +48,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -184,7 +183,8 @@ div.csl-indent {
 <li class="chapter" data-level="2.10.2" data-path="hinweise.html"><a href="hinweise.html#lerntipps"><i class="fa fa-check"></i><b>2.10.2</b> Lerntipps</a></li>
 </ul></li>
 <li class="chapter" data-level="2.11" data-path="hinweise.html"><a href="hinweise.html#umgangsformen"><i class="fa fa-check"></i><b>2.11</b> Umgangsformen</a></li>
-<li class="chapter" data-level="2.12" data-path="hinweise.html"><a href="hinweise.html#salvatorische-klausel"><i class="fa fa-check"></i><b>2.12</b> Salvatorische Klausel</a></li>
+<li class="chapter" data-level="2.12" data-path="hinweise.html"><a href="hinweise.html#wenn-der-unterricht-ausfällt"><i class="fa fa-check"></i><b>2.12</b> Wenn der Unterricht ausfällt</a></li>
+<li class="chapter" data-level="2.13" data-path="hinweise.html"><a href="hinweise.html#salvatorische-klausel"><i class="fa fa-check"></i><b>2.13</b> Salvatorische Klausel</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="rahmen.html"><a href="rahmen.html"><i class="fa fa-check"></i><b>3</b> Rahmen</a>
 <ul>
@@ -270,10 +270,10 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="deskriptive-statistik" class="section level1" number="5">
-<h1><span class="header-section-number">Kapitel 5</span> Deskriptive Statistik</h1>
-<div id="metrische-variablen" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> Metrische Variablen</h2>
+<div id="deskriptive-statistik" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Kapitel 5</span> Deskriptive Statistik<a href="deskriptive-statistik.html#deskriptive-statistik" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="metrische-variablen" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Metrische Variablen<a href="deskriptive-statistik.html#metrische-variablen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In R gibt es wie gesagt viele Pakete.
 Eines davon, es heißt <code>rstatix</code> (nicht unbedingt kreativ, der Name),
 birgt eine Reihe komfortabler Befehle der deskriptiven Statistik.</p>
@@ -305,7 +305,8 @@ es nicht starten.</p>
 ##  9 qsec        32 14.5   22.9   17.7   16.9   18.9    2.01   1.42   17.8  
 ## 10 vs          32  0      1      0      0      1      1      0       0.438
 ## 11 wt          32  1.51   5.42   3.32   2.58   3.61   1.03   0.767   3.22 
-## # … with 3 more variables: sd &lt;dbl&gt;, se &lt;dbl&gt;, ci &lt;dbl&gt;</code></pre>
+## # … with 3 more variables: sd &lt;dbl&gt;, se &lt;dbl&gt;, ci &lt;dbl&gt;
+## # ℹ Use `colnames()` to see all variable names</code></pre>
 <p>Der Befehl <code>get_summary_stats(name_einer_tabelle)</code> liefert einen Haufen
 Statistiken zurück. Braucht das überhaupt ein Mensch, so viel Zeugs?
 Na gut, wir sind nicht hier,
@@ -349,8 +350,8 @@ nur noch 3 Statistiken angezeigt:</p>
 <li>sd (Standardabweichung)</li>
 </ul>
 </div>
-<div id="nominale-variablen" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> Nominale Variablen</h2>
+<div id="nominale-variablen" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Nominale Variablen<a href="deskriptive-statistik.html#nominale-variablen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Mit dem Befehl <code>freq_table(name_der_tabelle, name_der_spalte, name_der_spalte)</code>
 können wir uns Häufigkeiten (frequencies) in Tabellenform ausgeben lassen.
 Nett!</p>
@@ -365,8 +366,8 @@ Nett!</p>
 ## 5     1     6     3  23.1
 ## 6     1     8     2  15.4</code></pre>
 </div>
-<div id="subgruppenanalyse" class="section level2" number="5.3">
-<h2><span class="header-section-number">5.3</span> Subgruppenanalyse</h2>
+<div id="subgruppenanalyse" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Subgruppenanalyse<a href="deskriptive-statistik.html#subgruppenanalyse" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Aber was ist, wenn wir eine Subgruppenanalyse machen möchten?
 Was ist z.B. der mittlere Spritverbrauch in der Gruppe der Automatikautos (am=0)?</p>
 <p>Um eine Subgruppenanalyse zu bekommen,
@@ -410,8 +411,8 @@ weil, warum nicht:</p>
 ## 2     6     7  21.9
 ## 3     8    14  43.8</code></pre>
 </div>
-<div id="vertiefung-datenjudo-dplyr" class="section level2" number="5.4">
-<h2><span class="header-section-number">5.4</span> Vertiefung: Datenjudo <code>dplyr</code></h2>
+<div id="vertiefung-datenjudo-dplyr" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Vertiefung: Datenjudo <code>dplyr</code><a href="deskriptive-statistik.html#vertiefung-datenjudo-dplyr" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Taucht man etwas tiefer in die Datenanalyse ein,
 so tauchen früher oder später (meist früher) Probleme des “Datenjudo” auf:</p>
 <ul>
@@ -422,14 +423,14 @@ so tauchen früher oder später (meist früher) Probleme des “Datenjudo” auf
 <p>Für Aufgaben solcher Art ist das R-Paket <code>dplyr</code> bestens geeignet.</p>
 <p>Einführungen finden sich z.B. im <a href="https://moderndive.com/3-wrangling.html">Kapitel 3</a> von <span class="citation">Ismay and Kim (<a href="#ref-ismay_moderndive_2019" role="doc-biblioref">2019</a>)</span> oder Kapitel 7 und 9 bei <span class="citation">Sauer (<a href="#ref-sauer_moderne_2019" role="doc-biblioref">2019</a>)</span>.</p>
 </div>
-<div id="literaturhinweise-2" class="section level2" number="5.5">
-<h2><span class="header-section-number">5.5</span> Literaturhinweise</h2>
+<div id="literaturhinweise-2" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Literaturhinweise<a href="deskriptive-statistik.html#literaturhinweise-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In englischer Sprache findet sich ein Überblick an deskriptiver Statistik mit R aus angewandter Perspektive bei <span class="citation">Cetinkaya-Rundel and Hardin (<a href="#ref-cetinkaya-rundel_introduction_2021" role="doc-biblioref">2021</a>)</span>, <a href="https://openintro-ims.netlify.app/explore-numerical.html">Kapitel 4-6</a>.
 Alternativ bietet <span class="citation">Sauer (<a href="#ref-sauer_moderne_2019" role="doc-biblioref">2019</a>)</span> einen Überblick (Kapitel 8).</p>
 
 </div>
 </div>
-<h3>Literatur</h3>
+<h3>Literatur<a href="literatur.html#literatur" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-cetinkaya-rundel_introduction_2021" class="csl-entry">
 Cetinkaya-Rundel, Mine, and Johanna Hardin. 2021. <em>Introduction to <span>Modern</span> <span>Statistics</span></em>. <a href="https://openintro-ims.netlify.app/">https://openintro-ims.netlify.app/</a>.
